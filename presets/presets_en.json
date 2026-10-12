@@ -1,0 +1,273 @@
+{
+  "format": "swapday-presets",
+  "version": 1,
+  "updated": "2026-10-13",
+  "language": "en",
+  "categories": [
+    { "id": "water_purifier", "name": "Water purifier", "emoji": "💧" },
+    { "id": "air_purifier", "name": "Air purifier", "emoji": "🌬️" },
+    { "id": "air_conditioner", "name": "Air conditioner", "emoji": "❄️" },
+    { "id": "car", "name": "Car", "emoji": "🚗" },
+    { "id": "home", "name": "Home", "emoji": "🏠" },
+    { "id": "safety", "name": "Safety", "emoji": "🔥" },
+    { "id": "pet", "name": "Pets", "emoji": "🐶" }
+  ],
+  "parts": [
+    {
+      "id": "wp_sediment", "category": "water_purifier", "name": "Sediment filter", "aliases": ["Stage 1 filter", "Pre-filter"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Varies by maker and model. Use a shorter cycle with poor water quality or heavy use.",
+      "source": "Cuckoo purifier care schedule (rental retailer page): 4 months. No official maker document found.",
+      "sourceUrl": "https://rentre.kr/product/1522012001", "checked": "2026-10-13", "verified": false
+    },
+    {
+      "id": "wp_pre_carbon", "category": "water_purifier", "name": "Pre-carbon filter", "aliases": ["Carbon pre-filter", "Stage 2 filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Can change with source water quality and usage.",
+      "source": "LG Electronics Korea support: replacement cycle by filter type",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150585408080", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "wp_uf_membrane", "category": "water_purifier", "name": "UF membrane filter", "aliases": ["Ultrafiltration filter", "UF filter"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Can change with source water quality and usage.",
+      "source": "LG Electronics Korea support: replacement cycle by filter type",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150585408080", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "wp_ro_membrane", "category": "water_purifier", "name": "RO membrane", "aliases": ["Reverse osmosis membrane", "RO filter"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": { "min": 18, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Varies by maker and model (18 to 24 months). Follow your product manual first.",
+      "source": "Coway RO model care schedule (rental retailer page): 18 months; US RO parts retailer: 24 months. No official maker document found.",
+      "sourceUrl": "https://espwaterproducts.com/collections/hydrotech-1240-series-e", "checked": "2026-10-13", "verified": false
+    },
+    {
+      "id": "wp_post_carbon", "category": "water_purifier", "name": "Post-carbon filter", "aliases": ["Carbon post-filter", "Final stage filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Some models use 12 months.",
+      "source": "LG Electronics Korea support: replacement cycle by filter type",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150585408080", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ap_hepa", "category": "air_purifier", "name": "HEPA filter", "aliases": ["Dust filter", "True HEPA"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Shorter with long daily use or polluted air. Replace it when the indicator lights up or the filter smells.",
+      "source": "LG Electronics Korea support (dust filter 12 months, 6 months on some models); Dyson support (12 months)",
+      "sourceUrl": "https://www.dyson.co.uk/support/air-treatment/purifiers/purifier-cool-pc1", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ap_deodor", "category": "air_purifier", "name": "Carbon (odor) filter", "aliases": ["Activated carbon filter", "Deodorizing filter"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Some models use a 6-month cycle.",
+      "source": "LG Electronics Korea support: air purifier filter care (odor filter 12 months, 6 months on some models)",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20153405050483", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ap_prefilter", "category": "air_purifier", "name": "Pre-filter cleaning", "aliases": ["Mesh pre-filter", "Pre-filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "This is a cleaning cycle, not a replacement. Clean it more often in dusty rooms.",
+      "source": "LG Electronics Korea support: air purifier filter care (wash the mesh filter once a month; some models as needed)",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20153405050483", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ac_filter", "category": "air_conditioner", "name": "AC filter cleaning", "aliases": ["Air conditioner filter", "Dust filter"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 2,
+      "note": "During the cooling season. Also clean it before and after summer.",
+      "source": "Samsung Electronics Service Korea: clean the panel and filter about every 2 weeks",
+      "sourceUrl": "https://www.samsungsvc.co.kr/solution/214790", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_engine_oil", "category": "car", "name": "Engine oil and filter", "aliases": ["Oil change", "Engine oil"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": 10000, "notifyDaysBefore": 14,
+      "note": "Varies by model and engine (Hyundai normal schedule: 10,000 to 15,000 km or 12 months; US: 8,000 mi or 12 months). Severe use (short trips, heavy traffic) needs 5,000 to 7,500 km or 6 months.",
+      "source": "Hyundai owner's manuals: normal maintenance schedule (DN8 2025 US/AU, SX2 2025 Korea), severe usage (DN8 2026 Korea)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_US/topic_ybb_1yh_lwb.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_cabin_filter", "category": "car", "name": "Cabin air filter", "aliases": ["Climate control air filter", "AC filter (car)"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Varies by model and region (12 to 24 months). Replace it more often on dusty roads.",
+      "source": "Hyundai owner's manuals: normal maintenance schedule (SX2 2025 Korea 12 months, DN8 2025 Australia 24 months)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_air_cleaner", "category": "car", "name": "Engine air filter", "aliases": ["Air cleaner filter", "Air filter"],
+      "recommended": { "amount": 36, "unit": "MONTH" }, "range": { "min": 36, "max": 48, "unit": "MONTH" },
+      "distanceKm": 40000, "notifyDaysBefore": 14,
+      "note": "Varies by model and region (36 to 48 months, about 40,000 km). Inspect it often in dusty areas.",
+      "source": "Hyundai owner's manuals: normal maintenance schedule (DN8 2025 Australia 48 months/40,000 km, US 36 months/24,000 mi)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_brake_fluid", "category": "car", "name": "Brake fluid", "aliases": ["Brake oil"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": { "min": 24, "max": 48, "unit": "MONTH" },
+      "distanceKm": 30000, "notifyDaysBefore": 14,
+      "note": "Varies by model and region (Australia 30,000 km or 24 months, Korea 50,000 km, US 48 months).",
+      "source": "Hyundai owner's manuals: normal maintenance schedule (DN8 2025 Australia/US, SX2 2025 Korea)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_coolant", "category": "car", "name": "Engine coolant", "aliases": ["Antifreeze"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": { "min": 24, "max": 120, "unit": "MONTH" },
+      "distanceKm": 40000, "notifyDaysBefore": 14,
+      "note": "On a new car, first replace at 200,000 km or 120 months, then every 40,000 km or 24 months (Hyundai).",
+      "source": "Hyundai owner's manuals: normal maintenance schedule (DN8 2025 Australia/US)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_tire_rotation", "category": "car", "name": "Tire rotation", "aliases": ["Rotate tires"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": 10000, "notifyDaysBefore": 14,
+      "note": "The US manual says 8,000 mi (13,000 km) or 12 months.",
+      "source": "Hyundai owner's manual: normal maintenance schedule (DN8 2025 Australia)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_battery", "category": "car", "name": "Car battery", "aliases": ["12V battery"],
+      "recommended": { "amount": 36, "unit": "MONTH" }, "range": { "min": 36, "max": 60, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 30,
+      "note": "Shorter in hot climates. After 3 years, have it tested every year.",
+      "source": "AAA: replace every three to five years as a general rule",
+      "sourceUrl": "https://www.aaa.com/autorepair/articles/when-to-replace-your-cars-battery", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_wiper", "category": "car", "name": "Wiper blades", "aliases": ["Windshield wipers"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "6 to 12 months, depending on climate and driving. Replace them now if they streak or chatter.",
+      "source": "AAA: replace every 6 to 12 months",
+      "sourceUrl": "https://www.acg.aaa.com/connect/blogs/6c/auto/when-to-replace-your-windshield-wipers-and-why-it-matters", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_toothbrush", "category": "home", "name": "Toothbrush", "aliases": ["Manual toothbrush"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 3, "max": 4, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace it sooner if the bristles are frayed.",
+      "source": "American Dental Association (ADA): every 3 to 4 months",
+      "sourceUrl": "https://www.ada.org/resources/ada-library/oral-health-topics/toothbrushes", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_brush_head", "category": "home", "name": "Electric toothbrush head", "aliases": ["Brush head"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Based on brushing twice a day. Replace it sooner when the indicator bristles fade.",
+      "source": "Philips Sonicare and Oral-B support: about every 3 months",
+      "sourceUrl": "https://oralb.com/en-us/how-often-should-i-change-my-oral-b-toothbrush-head/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_shower_filter", "category": "home", "name": "Shower filter", "aliases": ["Shower head filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "For cartridge filters (about 10,000 gallons or 6 months). Small vitamin or sediment filters can be much shorter, so follow the label first.",
+      "source": "Aquasana: shower cartridge lasts 10,000 gallons or up to 6 months",
+      "sourceUrl": "https://www.aquasana.com/water-filter-replacements/shower-filter-replacements/shower-replacement-cartridge-100236244.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_humidifier_filter", "category": "home", "name": "Humidifier wick filter", "aliases": ["Humidifier filter", "Wicking filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "For wicking (evaporative) filters: 30 to 60 days. Replace it more often with hard water.",
+      "source": "Honeywell: change the wicking filter every 30 to 60 days",
+      "sourceUrl": "https://www.honeywellpluggedin.com/?p=14316", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_fridge_filter", "category": "home", "name": "Refrigerator water filter", "aliases": ["Fridge filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Use genuine filters.",
+      "source": "Samsung support (every 6 months); LG Electronics Korea support (dispenser fridge filter 6 months)",
+      "sourceUrl": "https://www.samsung.com/sg/support/home-appliances/how-often-to-change-the-water-filter-for-samsung-refrigerator/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_hood_filter", "category": "home", "name": "Range hood filter cleaning", "aliases": ["Grease filter", "Hood filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "For metal mesh grease filters. Clean them more often if you fry or stir-fry a lot. Replace carbon filters; do not wash them.",
+      "source": "Broan-NuTone support: wash about every month; Faber: every 2 months",
+      "sourceUrl": "https://help.broan-nutone.com/range-hoods/How-often-should-I-clean-my-filters-79f5", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_vacuum_filter", "category": "home", "name": "Vacuum filter wash", "aliases": ["Vacuum filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "For cordless vacuums. Let it dry fully for at least 24 hours.",
+      "source": "Dyson support: wash the cordless vacuum filter once a month",
+      "sourceUrl": "https://www.dyson.co.uk/support/vacuum-cleaners/cordless/filter-care", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_sponge", "category": "home", "name": "Kitchen sponge", "aliases": ["Sponge", "Dish scrubber"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 1, "max": 2, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Replace it now if it smells or looks dirty.",
+      "source": "News interview with a Cleveland Clinic infectious disease specialist (at least every 2 weeks). No official institution document found.",
+      "sourceUrl": "https://www.cronista.com/en/today/frank-esper-health-expert-kitchen-sponges-should-be-changed-at-least-every-two-weeks/", "checked": "2026-10-13", "verified": false
+    },
+    {
+      "id": "home_pillow", "category": "home", "name": "Pillow", "aliases": ["Bed pillow"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "Memory foam pillows last 2 to 3 years. Replace it if it stays folded when you fold it in half.",
+      "source": "News article citing the Sleep Foundation (1 to 2 years). Foundation original not confirmed.",
+      "sourceUrl": "https://www.uc.edu/news/articles/2021/06/n21013368.html", "checked": "2026-10-13", "verified": false
+    },
+    {
+      "id": "home_mattress_rotate", "category": "home", "name": "Mattress rotation", "aliases": ["Rotate mattress"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "For foam, latex and newer innerspring mattresses. Older innerspring: 2 to 6 months. Some mattresses must not be rotated, so check the manual first.",
+      "source": "Sleep Foundation: mattress care",
+      "sourceUrl": "https://www.sleepfoundation.org/mattress-care", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_smoke_test", "category": "safety", "name": "Smoke alarm test", "aliases": ["Smoke detector test"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Push the test button and listen for the alarm.",
+      "source": "U.S. Fire Administration (USFA): test the alarm monthly",
+      "sourceUrl": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_smoke_battery", "category": "safety", "name": "Smoke alarm battery", "aliases": ["Smoke detector battery"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 14,
+      "note": "For replaceable batteries (9-volt and similar). Alarms with a sealed 10-year battery need a new alarm instead.",
+      "source": "U.S. Fire Administration (USFA): replace the batteries at least once every year",
+      "sourceUrl": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_smoke_unit", "category": "safety", "name": "Smoke alarm unit", "aliases": ["Replace smoke detector"],
+      "recommended": { "amount": 10, "unit": "YEAR" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 30,
+      "note": "Count 10 years from the manufacture date, not the purchase date.",
+      "source": "U.S. Fire Administration (USFA): replace the entire smoke alarm every 10 years",
+      "sourceUrl": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_extinguisher_check", "category": "safety", "name": "Fire extinguisher check", "aliases": ["Extinguisher pressure check"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Look at the gauge (needle in the green), the safety pin and the body. Replace or service it according to the label and local rules.",
+      "source": "OSHA 29 CFR 1910.157: inspect portable extinguishers visually every month",
+      "sourceUrl": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.157", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "pet_fountain_filter", "category": "pet", "name": "Pet fountain filter", "aliases": ["Water fountain filter", "Cat fountain filter"],
+      "recommended": { "amount": 3, "unit": "WEEK" }, "range": { "min": 2, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 2,
+      "note": "Replace it more often with several pets. Clean the fountain on the same cycle.",
+      "source": "PetSafe support: replace the filter every 2 to 4 weeks",
+      "sourceUrl": "https://support.petsafe.net/articles/how-to-replace-the-filters-in-petsafe-viva-fountain/", "checked": "2026-10-13", "verified": true
+    }
+  ]
+}
