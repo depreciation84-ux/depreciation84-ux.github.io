@@ -1,6 +1,6 @@
 {
   "format": "swapday-presets",
-  "version": 1,
+  "version": 2,
   "updated": "2026-10-13",
   "language": "en",
   "categories": [
@@ -18,7 +18,7 @@
       "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "Varies by maker and model. Use a shorter cycle with poor water quality or heavy use.",
-      "source": "Cuckoo purifier care schedule (rental retailer page): 4 months. No official maker document found.",
+      "source": "Cuckoo purifier care schedule (rental retailer page): 4 months. For reference, Coway manual (CHP-7210N): Nanotrap filter 4 months (not the same filter type). No official sediment filter document found.",
       "sourceUrl": "https://rentre.kr/product/1522012001", "checked": "2026-10-13", "verified": false
     },
     {
@@ -39,11 +39,11 @@
     },
     {
       "id": "wp_ro_membrane", "category": "water_purifier", "name": "RO membrane", "aliases": ["Reverse osmosis membrane", "RO filter"],
-      "recommended": { "amount": 24, "unit": "MONTH" }, "range": { "min": 18, "max": 24, "unit": "MONTH" },
+      "recommended": { "amount": 20, "unit": "MONTH" }, "range": { "min": 18, "max": 24, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 14,
-      "note": "Varies by maker and model (18 to 24 months). Follow your product manual first.",
-      "source": "Coway RO model care schedule (rental retailer page): 18 months; US RO parts retailer: 24 months. No official maker document found.",
-      "sourceUrl": "https://espwaterproducts.com/collections/hydrotech-1240-series-e", "checked": "2026-10-13", "verified": false
+      "note": "Varies by maker and model (18 to 24 months). It changes with source water and usage, so follow your product manual first.",
+      "source": "Coway water purifier manual (P-6320L): RO membrane filter, expected replacement 20 months",
+      "sourceUrl": "https://www.coway.com/core/product/fmanual/download/72", "checked": "2026-10-13", "verified": true
     },
     {
       "id": "wp_post_carbon", "category": "water_purifier", "name": "Post-carbon filter", "aliases": ["Carbon post-filter", "Final stage filter"],
@@ -209,7 +209,7 @@
       "id": "home_sponge", "category": "home", "name": "Kitchen sponge", "aliases": ["Sponge", "Dish scrubber"],
       "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 1, "max": 2, "unit": "WEEK" },
       "distanceKm": null, "notifyDaysBefore": 1,
-      "note": "Replace it now if it smells or looks dirty.",
+      "note": "Replace it now if it smells or looks dirty. University of Illinois Extension advises switching sponges and dish rags for clean ones every day and washing or sanitizing them.",
       "source": "News interview with a Cleveland Clinic infectious disease specialist (at least every 2 weeks). No official institution document found.",
       "sourceUrl": "https://www.cronista.com/en/today/frank-esper-health-expert-kitchen-sponges-should-be-changed-at-least-every-two-weeks/", "checked": "2026-10-13", "verified": false
     },
@@ -217,9 +217,9 @@
       "id": "home_pillow", "category": "home", "name": "Pillow", "aliases": ["Bed pillow"],
       "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 14,
-      "note": "Memory foam pillows last 2 to 3 years. Replace it if it stays folded when you fold it in half.",
-      "source": "News article citing the Sleep Foundation (1 to 2 years). Foundation original not confirmed.",
-      "sourceUrl": "https://www.uc.edu/news/articles/2021/06/n21013368.html", "checked": "2026-10-13", "verified": false
+      "note": "By fill: memory foam 2 to 3 years, latex 2 to 4 years, down or feather 1 to 3 years, polyester 6 months to 2 years. Replace it if it stays folded when you fold it in half. Wash pillowcases weekly.",
+      "source": "Sleep Foundation: most experts recommend replacing pillows every 1 to 2 years",
+      "sourceUrl": "https://www.sleepfoundation.org/pillows/how-often-should-you-replace-your-pillow", "checked": "2026-10-13", "verified": true
     },
     {
       "id": "home_mattress_rotate", "category": "home", "name": "Mattress rotation", "aliases": ["Rotate mattress"],
@@ -268,6 +268,86 @@
       "note": "Replace it more often with several pets. Clean the fountain on the same cycle.",
       "source": "PetSafe support: replace the filter every 2 to 4 weeks",
       "sourceUrl": "https://support.petsafe.net/articles/how-to-replace-the-filters-in-petsafe-viva-fountain/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_drive_belt", "category": "car", "name": "Drive belt inspection", "aliases": ["Serpentine belt", "Fan belt"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": null,
+      "distanceKm": 30000, "notifyDaysBefore": 14,
+      "note": "This is an inspection cycle, not a replacement. Replace the belt if it is cracked or stretched.",
+      "source": "Hyundai owner's manual: normal maintenance schedule (DN8 2025 Australia), inspect every 30,000 km or 24 months",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/DN8/2025/en_AU/id212434cca84.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "car_tire_age", "category": "car", "name": "Tire replacement (age)", "aliases": ["Tire age", "Old tires"],
+      "recommended": { "amount": 6, "unit": "YEAR" }, "range": { "min": 6, "max": 10, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 30,
+      "note": "Rubber ages even without wear. Count from the manufacture date (last 4 digits of the DOT code = week and year). After 5 years, have the tires inspected every year. Replace them sooner if the tread is worn to the limit.",
+      "source": "Coverage of the NHTSA tire aging report: some vehicle makers say 6 years, tire makers up to 10 years. Agency original not confirmed.",
+      "sourceUrl": "https://www.tirereview.com/decoding-nhtsas-tire-aging-report/", "checked": "2026-10-13", "verified": false
+    },
+    {
+      "id": "home_pitcher_filter", "category": "home", "name": "Water pitcher filter", "aliases": ["Brita filter", "Pitcher filter"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 5,
+      "note": "About 40 gallons or 2 months, whichever comes first. Replace it more often with hard water or heavy use.",
+      "source": "Brita: replace every 40 gallons or about every 2 months",
+      "sourceUrl": "https://www.brita.com/products/standard-replacement-filters/", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_washer_tub", "category": "home", "name": "Washer tub cleaning", "aliases": ["Tub clean", "Washing machine cleaning"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "If you skipped it for 6 months or more, run it 3 times in a row. Front loaders: run Tub Clean after about 30 washes or when tCL appears.",
+      "source": "LG Electronics Korea support: clean the top-load washer tub once a month",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-1430889036106", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_sheets", "category": "home", "name": "Bed sheet washing", "aliases": ["Wash bedding", "Duvet cover wash"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "If you do not sleep in the bed every day, every 2 weeks can be enough. If pets sleep in the bed, wash every 3 to 4 days.",
+      "source": "Sleep Foundation: most people should wash sheets once a week",
+      "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-often-should-you-wash-your-sheets", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_mattress_replace", "category": "home", "name": "Mattress replacement", "aliases": ["Mattress lifespan"],
+      "recommended": { "amount": 7, "unit": "YEAR" }, "range": { "min": 6, "max": 8, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 30,
+      "note": "Replace it sooner if it sags, gets noisy, or you wake up stiff. Latex can last more than 8 years.",
+      "source": "Sleep Foundation: replace mattresses every 6 to 8 years under normal conditions",
+      "sourceUrl": "https://www.sleepfoundation.org/mattress-information/when-should-you-replace-your-mattress", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_humidifier_tank", "category": "home", "name": "Humidifier tank cleaning", "aliases": ["Clean humidifier", "Humidifier wash"],
+      "recommended": { "amount": 3, "unit": "DAY" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 0,
+      "note": "Empty the tank, wipe it dry and refill it every day. Rinse well after any cleaning agent.",
+      "source": "US EPA: clean portable humidifiers every third day, change the water daily",
+      "sourceUrl": "https://www.epa.gov/indoor-air-quality-iaq/use-and-care-home-humidifiers", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "home_lens_case", "category": "home", "name": "Contact lens case", "aliases": ["Lens case"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Get a new case at least every 3 months. Rinse it with solution daily and store it upside down with the caps off.",
+      "source": "US CDC: replace your contact lens case at least every 3 months",
+      "sourceUrl": "https://archive.cdc.gov/www_cdc_gov/contactlenses/palm-cards.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_co_alarm_test", "category": "safety", "name": "CO alarm test", "aliases": ["Carbon monoxide alarm", "CO detector"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Replace the batteries once a year. Replace the unit as the maker says or when the end-of-life signal sounds.",
+      "source": "US CPSC: test alarms monthly, replace batteries annually",
+      "sourceUrl": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/CO-Alarms", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "safety_extinguisher_replace", "category": "safety", "name": "Fire extinguisher replacement", "aliases": ["Extinguisher lifespan"],
+      "recommended": { "amount": 10, "unit": "YEAR" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 30,
+      "note": "For dry chemical extinguishers in Korea, counted from the manufacture date. Rules differ by country; follow the label and local rules.",
+      "source": "Korea Fire Institute (KFI): dry chemical extinguishers past 10 years from manufacture must be replaced or performance-checked",
+      "sourceUrl": "https://www.kfsi.or.kr/contents/webzine/201703/sub02-01.html", "checked": "2026-10-13", "verified": true
     }
   ]
 }
