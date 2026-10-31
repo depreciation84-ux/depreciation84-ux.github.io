@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>툰렌즈 API 키 받는 법</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="lang"><b>한국어</b> · <a href="en.html">English</a></p>
+<h1>툰렌즈 API 키 받는 법</h1>
+<p class="muted">최종 수정: 2026-11-01. 업체별 순서는 각 업체의 공식 문서(2026-11-01 확인)를 따릅니다. 업체 화면과 요금은 바뀔 수 있습니다. 요금은 각 업체 페이지에서 확인하세요.</p>
+
+<p>툰렌즈의 3·4단계(클라우드 AI) 번역은 <b>사용자 본인의 API 키</b>로 업체에 직접 요청합니다. 개발자는 키와 번역 내용을 받지 않습니다. 요금은 키를 만든 계정에 매겨집니다.</p>
+
+<div class="warn">
+<b>키를 지키세요.</b> 키를 남에게 보이거나 메일·채팅·스크린샷으로 보내지 마세요. 키가 새면 남이 내 계정으로 요금을 쓸 수 있습니다. 키가 샜다고 생각하면 업체 페이지에서 그 키를 바로 지우고 새로 만드세요.
+</div>
+
+<h2>어느 업체를 고를까요?</h2>
+<table>
+  <tr><th>업체</th><th>툰렌즈 단계</th><th>시작 조건</th><th>메모</th></tr>
+  <tr><td><a href="#gemini">Google Gemini</a></td><td>3·4단계</td><td>Google 계정</td><td>처음 써 보기에 가장 쉽습니다</td></tr>
+  <tr><td><a href="#claude">Anthropic Claude</a></td><td>3·4단계</td><td>크레딧 결제</td><td>문장이 자연스럽습니다</td></tr>
+  <tr><td><a href="#openai">OpenAI</a></td><td>3·4단계</td><td>크레딧 결제</td><td></td></tr>
+  <tr><td><a href="#deepseek">DeepSeek</a></td><td>3단계(텍스트)</td><td>잔액 충전</td><td>요금이 낮습니다</td></tr>
+  <tr><td><a href="#deepl">DeepL</a></td><td>3단계(번역 전용)</td><td>DeepL API 계정 (Free 요금제 있음)</td><td>DeepL 번역기 계정과 따로 만듭니다</td></tr>
+  <tr><td><a href="#google-cloud">Google Cloud</a></td><td>3단계(번역 전용), 4단계 클라우드 OCR</td><td>결제 계정 연결</td><td>Cloud Translation API, Cloud Vision API</td></tr>
+  <tr><td><a href="#microsoft">Microsoft Translator</a></td><td>3단계(번역 전용)</td><td>Azure 계정 (무료 등급 있음)</td><td>지역은 Global을 권합니다</td></tr>
+</table>
+
+<h2 id="app">툰렌즈에 키를 넣는 법 (모든 업체 같음)</h2>
+<ol>
+  <li>업체 페이지에서 키를 만들고 <b>복사</b>합니다 (아래 업체별 순서).</li>
+  <li>툰렌즈에서 설정(오른쪽 위 톱니)을 엽니다. 맨 위 "번역 모드"에서 <b>3단계</b> 또는 <b>4단계</b> 카드를 누릅니다 (그림 ①).</li>
+</ol>
+<figure><img src="img/app-1-ko.png" alt="툰렌즈 설정의 번역 모드 카드. 3단계와 4단계 카드에 ① 표시" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>① 3단계(텍스트) 또는 4단계(비전) 카드를 누릅니다</figcaption></figure>
+<ol start="3">
+  <li>"클라우드 연결" 창에서 업체를 고릅니다 (그림 ②).</li>
+  <li>키를 아직 만들지 않았으면 "키 받는 법 보기"를 누릅니다 (그림 ③). 이 페이지의 그 업체 칸이 열립니다.</li>
+</ol>
+<figure><img src="img/app-2-ko.png" alt="클라우드 연결 창. 업체 목록의 Gemini에 ②, 키 받는 법 보기 링크에 ③ 표시" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>② 업체 고르기 · ③ 키 받는 법 보기</figcaption></figure>
+<ol start="5">
+  <li>창을 위로 밀어 "API 키" 칸을 길게 누르고 붙여 넣습니다 (그림 ④). 키는 점으로 가려져 보입니다.</li>
+  <li>모델은 기본값(첫 줄)을 그대로 두어도 됩니다 (그림 ⑤).</li>
+  <li>외부 전송 안내를 읽고 <b>동의하고 사용</b>을 누릅니다 (그림 ⑥). 키를 넣어야 이 단추가 켜집니다.</li>
+</ol>
+<figure><img src="img/app-3-ko.png" alt="클라우드 연결 창 아래쪽. API 키 칸에 ④, 모델 목록에 ⑤, 동의하고 사용 단추에 ⑥ 표시" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>④ 키 붙여 넣기 · ⑤ 모델(기본값) · ⑥ 동의하고 사용</figcaption></figure>
+<p class="note">키는 기기 안에 암호화해 저장합니다. 저장한 뒤에는 칸에 다시 보이지 않습니다. 키를 바꾸려면 같은 창에서 새 키를 붙여 넣습니다.</p>
+
+<h2 id="gemini">Google Gemini</h2>
+<p class="muted">키 받는 곳: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> · 공식 안내: <a href="https://ai.google.dev/gemini-api/docs/api-key">Gemini API 키</a></p>
+<ol>
+  <li>Google AI Studio(<a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>)에 Google 계정으로 들어갑니다.</li>
+  <li>처음이면 서비스 약관에 동의합니다. 약관에 동의하면 기본 프로젝트가 만들어집니다.</li>
+  <li>API Keys 화면에서 <b>Create API key</b>를 누릅니다.</li>
+  <li>프로젝트를 고르라고 하면 기본 프로젝트를 고릅니다.</li>
+  <li>만들어진 키를 복사합니다.</li>
+</ol>
+<p class="note">키는 Google Cloud 프로젝트에 속합니다. 무료 사용량과 요금은 Google의 Gemini API 요금 페이지를 보세요. 무료 사용량으로 보낸 내용은 Google이 서비스 개선에 쓸 수 있습니다.</p>
+
+<h2 id="claude">Anthropic Claude</h2>
+<p class="muted">키 받는 곳: <a href="https://platform.claude.com/settings/keys">platform.claude.com → Settings → API keys</a> · 공식 안내: <a href="https://platform.claude.com/docs/en/get-api-key">Get your Claude API key</a></p>
+<ol>
+  <li>Claude Console(<a href="https://platform.claude.com">platform.claude.com</a>)에 가입하고 들어갑니다.</li>
+  <li>Settings → Billing(<a href="https://platform.claude.com/settings/billing">결제</a>)에서 크레딧을 삽니다.</li>
+  <li>Settings → API keys에서 키 만들기 단추를 누릅니다.</li>
+  <li>키 이름(예: toonlens)을 넣습니다. 키 종류와 만료 기간을 고르라고 하면 기본값을 둡니다.</li>
+  <li>키를 복사합니다. 키는 이때 한 번만 보입니다.</li>
+</ol>
+<p class="note">Billing 화면에서 지출 한도를 볼 수 있습니다. 처음에는 작은 금액만 넣기를 권합니다.</p>
+
+<h2 id="openai">OpenAI</h2>
+<p class="muted">키 받는 곳: <a href="https://platform.openai.com/api-keys">platform.openai.com → API keys</a> · 공식 안내: <a href="https://developers.openai.com/api/docs/quickstart">Developer quickstart</a></p>
+<ol>
+  <li>OpenAI Platform(<a href="https://platform.openai.com">platform.openai.com</a>)에 가입하고 들어갑니다. ChatGPT 구독과 API 요금은 따로입니다.</li>
+  <li>API keys 화면에서 <b>Create new secret key</b>를 누릅니다.</li>
+  <li>이름을 넣고 만든 뒤 키를 복사합니다. 키는 이때 한 번만 보입니다.</li>
+  <li>Billing 화면에서 크레딧을 넣습니다. 크레딧이 없으면 사용량 한도가 낮습니다.</li>
+</ol>
+
+<h2 id="deepseek">DeepSeek</h2>
+<p class="muted">키 받는 곳: <a href="https://platform.deepseek.com/api_keys">platform.deepseek.com → API keys</a> · 공식 안내: <a href="https://api-docs.deepseek.com/">DeepSeek API Docs</a></p>
+<ol>
+  <li>DeepSeek Platform(<a href="https://platform.deepseek.com">platform.deepseek.com</a>)에 가입하고 들어갑니다.</li>
+  <li>Top up(충전) 화면에서 잔액을 충전합니다. 잔액이 없으면 요청이 실패합니다.</li>
+  <li>API keys 화면에서 <b>Create new API key</b>를 누릅니다.</li>
+  <li>이름을 넣고 만든 뒤 키를 복사합니다.</li>
+</ol>
+<p class="note">DeepSeek 서버는 중국에 있습니다. 툰렌즈 "클라우드 연결" 창의 안내를 읽고 고르세요.</p>
+
+<h2 id="deepl">DeepL</h2>
+<p class="muted">키 받는 곳: <a href="https://www.deepl.com/your-account/keys">deepl.com/your-account/keys</a> · 공식 안내: <a href="https://developers.deepl.com/docs/getting-started/intro">DeepL API 시작하기</a></p>
+<ol>
+  <li>DeepL API 요금제 페이지(<a href="https://www.deepl.com/pro-api">deepl.com/pro-api</a>)에서 <b>DeepL API Free</b> 또는 <b>Pro</b>를 골라 가입합니다.</li>
+  <li>이미 DeepL 번역기(Translator) 계정이 있으면 로그아웃한 뒤 API용 새 계정을 만듭니다. DeepL 공식 안내가 이렇게 하라고 합니다.</li>
+  <li>계정의 API 키 화면(<a href="https://www.deepl.com/your-account/keys">your-account/keys</a>)에서 키를 복사합니다.</li>
+</ol>
+<p class="note">Free 키는 끝이 ":fx"입니다. 툰렌즈는 이것을 보고 Free 주소(api-free.deepl.com)로 보냅니다.</p>
+
+<h2 id="google-cloud">Google Cloud (번역 전용 · 클라우드 OCR)</h2>
+<p class="muted">키 받는 곳: <a href="https://console.cloud.google.com/apis/credentials">console.cloud.google.com → API 및 서비스 → 사용자 인증 정보</a> · 공식 안내: <a href="https://docs.cloud.google.com/docs/authentication/api-keys">API 키 관리</a></p>
+<ol>
+  <li>Google Cloud 콘솔(<a href="https://console.cloud.google.com">console.cloud.google.com</a>)에 들어가 프로젝트를 만듭니다.</li>
+  <li>결제 계정을 연결합니다.</li>
+  <li>API 및 서비스 → 라이브러리에서 쓸 API를 <b>사용 설정</b>합니다. API를 먼저 켜야 키 제한에서 고를 수 있습니다.
+    <ul><li>번역 전용(3단계): <b>Cloud Translation API</b></li><li>4단계 클라우드 OCR: <b>Cloud Vision API</b></li></ul></li>
+  <li>API 및 서비스 → <b>사용자 인증 정보</b>에서 <b>사용자 인증 정보 만들기 → API 키</b>를 누릅니다.</li>
+  <li>API 제한(API restrictions)에서 위에서 켠 API만 고르고 저장합니다.</li>
+  <li>"API 키 생성됨" 창의 키를 복사합니다.</li>
+</ol>
+<p class="note">Gemini 키(AI Studio)와 Google Cloud 키는 다를 수 있습니다. 번역 전용 키는 "클라우드 연결" 창에서 "Google Cloud Translation"을 고르고 넣습니다. 클라우드 OCR 키는 설정 → "고급: 번역 서비스·API 키" → "Google Cloud Vision" 칸에 넣습니다.</p>
+
+<h2 id="microsoft">Microsoft Translator</h2>
+<p class="muted">키 받는 곳: <a href="https://portal.azure.com">portal.azure.com → Translator 리소스 → 키 및 엔드포인트</a> · 공식 안내: <a href="https://learn.microsoft.com/azure/ai-services/translator/how-to/create-translator-resource">Translator 리소스 만들기</a></p>
+<ol>
+  <li>Azure 계정을 만들고 Azure 포털(<a href="https://portal.azure.com">portal.azure.com</a>)에 들어갑니다.</li>
+  <li><a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesTextTranslation">Translator 리소스 만들기</a>를 엽니다.</li>
+  <li>구독, 리소스 그룹, 이름을 넣습니다. <b>지역(Region)은 Global</b>을 고릅니다.</li>
+  <li>가격 책정 계층은 무료 등급(F0)을 고를 수 있습니다. 무료 등급은 구독마다 1개입니다.</li>
+  <li><b>검토 + 만들기</b> → <b>만들기</b>를 누르고, 끝나면 <b>리소스로 이동</b>을 누릅니다.</li>
+  <li>왼쪽 "리소스 관리" → <b>키 및 엔드포인트</b>에서 "키 1"을 복사합니다.</li>
+</ol>
+<p class="note">지역을 Global이 아닌 곳(예: koreacentral)으로 만들었으면, 툰렌즈 설정 → "고급: 번역 서비스·API 키"의 Microsoft 칸에 그 지역을 넣습니다.</p>
+
+<h2>잘 안 될 때</h2>
+<table>
+  <tr><th>보이는 것</th><th>뜻</th><th>할 일</th></tr>
+  <tr><td>401, 403, invalid key</td><td>키가 틀렸거나 지워졌습니다</td><td>키를 다시 복사해 붙여 넣습니다. 앞뒤 빈칸이 없는지 봅니다</td></tr>
+  <tr><td>402, insufficient balance, credit</td><td>잔액·크레딧이 없습니다</td><td>업체 Billing 화면에서 충전합니다</td></tr>
+  <tr><td>429, rate limit, quota</td><td>사용량 한도를 넘었습니다</td><td>잠시 뒤 다시 합니다. 한도를 올리거나 다른 업체를 씁니다</td></tr>
+  <tr><td>"기기 내 번역으로 바꿈"</td><td>클라우드 요청이 실패했습니다</td><td>위 항목을 확인합니다. 그래도 안 되면 설정 → 문제 알리기로 알려 주세요</td></tr>
+</table>
+
+<footer>툰렌즈(ToonLens) · <a href="../../privacy.html">개인정보처리방침</a> · 문의 <a href="mailto:depreciation84@gmail.com">depreciation84@gmail.com</a><br>각 업체 이름은 그 회사의 상표입니다. 업체 화면 이름은 바뀔 수 있습니다. 바뀌었으면 각 업체의 공식 안내를 따르세요.</footer>
+</body>
+</html>

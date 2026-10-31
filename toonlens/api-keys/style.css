@@ -1,0 +1,26 @@
+/* 툰렌즈 API 키 안내 (ko.html, en.html). privacy.html과 같은 글꼴·폭 */
+body { font-family: system-ui, -apple-system, "Malgun Gothic", sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 16px; line-height: 1.7; color: #222; background: #fff; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.2rem; margin-top: 40px; padding-top: 8px; border-top: 1px solid #eee; }
+a { color: #0b57d0; }
+.muted { color: #666; font-size: .9rem; }
+.lang { margin: 8px 0 24px; }
+.note { background: #f6f8fc; padding: 8px 12px; border-radius: 8px; font-size: .95rem; }
+.warn { background: #fff4e5; border: 1px solid #f0c27a; padding: 10px 14px; border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f6f6f6; }
+figure { margin: 12px 0 20px; }
+figure img { width: 100%; max-width: 360px; border: 1px solid #ddd; border-radius: 8px; }
+figcaption { color: #666; font-size: .88rem; }
+/* 스크린샷 파일이 아직 없으면 자리만 보인다 */
+figure.missing { border: 1px dashed #bbb; border-radius: 8px; padding: 18px; text-align: center; color: #888; }
+figure.missing img { display: none; }
+footer { margin-top: 48px; font-size: .88rem; color: #666; }
+@media (prefers-color-scheme: dark) {
+  body { color: #e6e6e6; background: #141414; }
+  a { color: #8ab4f8; }
+  th { background: #222; } th, td { border-color: #444; }
+  .note { background: #1e2633; } .warn { background: #3a2c14; border-color: #7a5a20; }
+  h2 { border-top-color: #333; } figure img { border-color: #444; }
+}

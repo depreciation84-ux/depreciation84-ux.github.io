@@ -89,6 +89,11 @@
   <tr><td>구독</td><td>결제는 Google Play가 처리합니다(3항). 앱은 구독 여부만 Google Play에 확인하고 기기에 저장합니다.</td></tr>
   <tr><td>내려받는 파일</td><td>사용자가 고른 기기 내 번역 모델 파일은 Hugging Face에서, 기기 내 기본 번역(Google ML Kit)의 언어 팩은 Google 서버에서, 내장 브라우저 광고 차단 목록은 공개 배포 주소에서 앱이 직접 받습니다. 이때 사용자 정보는 보내지 않으며, 각 배포처가 접속 기록(IP 주소 등)을 처리할 수 있습니다.</td></tr>
   <tr><td>내장 브라우저</td><td>사용자가 내장 브라우저로 연 웹사이트의 정보 처리는 그 웹사이트의 개인정보처리방침을 따릅니다. 앱은 방문 기록을 개발자에게 보내지 않습니다.</td></tr>
+  <tr><td>오류 보고 (선택)</td><td>사용자가 설정 → "문제 알리기"에서 "메일 쓰기"를 누를 때만 기기의 메일 앱이 열리고, 사용자가 내용을 확인한 뒤 직접 보냅니다. 앱이 자동으로 보내지 않습니다.<br>
+  <b>포함되는 정보</b>: 앱 버전, Android 버전, 기기 모델, RAM 크기, 화면 언어·번역 대상 언어, 번역 엔진 이름·모델 이름·처리 방식, 받은 모델 유무, 구독 여부, 설치일, 오류 코드·발생 시각·횟수·요약, 오류 기술 정보(스택 트레이스), 사용자가 직접 적은 설명, 사용자가 사진 선택기에서 직접 고른 화면 이미지(최대 3장, 크기를 줄이고 위치 등 메타데이터를 지움), 그리고 메일을 보내는 사용자의 이메일 주소(메일 발송 특성상 함께 전달됨).<br>
+  <b>포함되지 않는 정보</b>: API 키, 연 웹사이트 주소, 만화의 원문·번역문, 북마크. 단, 사용자가 고른 화면 이미지에는 그 화면에 보이던 내용이 그대로 들어갑니다.<br>
+  <b>받는 주소</b>: <a href="mailto:dongsung84881@gmail.com">dongsung84881@gmail.com</a> (오류 보고 전용)<br>
+  <b>이용 목적·보관 기간</b>: 9-1 바꿀날의 오류 보고와 같습니다(오류 원인 분석과 수정에만 사용, 해결 뒤 최대 1년 보관 후 삭제).</td></tr>
   <tr><td>이용 연령</td><td>만 18세 이상 사용자를 대상으로 합니다.</td></tr>
 </table>
 
@@ -165,6 +170,11 @@
   <tr><td>Subscriptions</td><td>Payments are processed by Google Play (Section 3). The App only checks your subscription status with Google Play and stores it on your device.</td></tr>
   <tr><td>Downloaded files</td><td>The App downloads the on-device translation model files you choose from Hugging Face, language packs for basic on-device translation (Google ML Kit) from Google servers, and ad-block lists for the built-in browser from their public distribution addresses. No user information is sent; each host may process access logs such as your IP address.</td></tr>
   <tr><td>Built-in browser</td><td>Websites you open in the built-in browser are subject to their own privacy policies. The App never sends your browsing history to the Developer.</td></tr>
+  <tr><td>Error reports (optional)</td><td>Your email app opens only when you tap "Write email" in Settings → "Report a problem", and you review and send the email yourself. The App never sends reports automatically.<br>
+  <b>Included</b>: app version, Android version, device model, RAM size, display language and translation target language, translation engine name, model name and processing mode, which models are downloaded, subscription status, install date, error codes with time, count and summary, technical error details (stack trace), any description you write, screenshots you pick yourself in the photo picker (up to 3, resized with location and other metadata removed), and your email address (sent with any email by nature).<br>
+  <b>Not included</b>: API keys, addresses of websites you opened, original or translated comic text, bookmarks. Note that a screenshot you pick contains whatever was on that screen.<br>
+  <b>Recipient</b>: <a href="mailto:dongsung84881@gmail.com">dongsung84881@gmail.com</a> (error reports only)<br>
+  <b>Purpose and retention</b>: same as SwapDay error reports in 9-1 (used only to analyze and fix errors; kept for up to one year after the error is fixed, then deleted).</td></tr>
   <tr><td>Age</td><td>The App is intended for users aged 18 and over.</td></tr>
 </table>
 

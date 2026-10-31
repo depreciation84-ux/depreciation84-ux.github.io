@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToonLens API Key Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="lang"><a href="ko.html">한국어</a> · <b>English</b></p>
+<h1>How to get an API key for ToonLens</h1>
+<p class="muted">Last updated: 2026-11-01. The steps for each provider follow that provider's official documentation (checked on 2026-11-01). Provider screens and prices can change. Check prices on each provider's page.</p>
+
+<p>Levels 3 and 4 (cloud AI) in ToonLens send requests directly to the provider with <b>your own API key</b>. The developer never receives your key or what you translate. Charges go to the account that created the key.</p>
+
+<div class="warn">
+<b>Keep your key private.</b> Do not show it to anyone or send it by email, chat, or screenshot. A leaked key lets others spend money on your account. If you think a key leaked, delete it on the provider's page right away and create a new one.
+</div>
+
+<h2>Which provider should I choose?</h2>
+<table>
+  <tr><th>Provider</th><th>ToonLens level</th><th>To start</th><th>Notes</th></tr>
+  <tr><td><a href="#gemini">Google Gemini</a></td><td>Levels 3 and 4</td><td>Google account</td><td>Easiest to try first</td></tr>
+  <tr><td><a href="#claude">Anthropic Claude</a></td><td>Levels 3 and 4</td><td>Buy credits</td><td>Natural phrasing</td></tr>
+  <tr><td><a href="#openai">OpenAI</a></td><td>Levels 3 and 4</td><td>Buy credits</td><td></td></tr>
+  <tr><td><a href="#deepseek">DeepSeek</a></td><td>Level 3 (text)</td><td>Top up balance</td><td>Low price</td></tr>
+  <tr><td><a href="#deepl">DeepL</a></td><td>Level 3 (translation API)</td><td>DeepL API account (Free plan available)</td><td>Separate from a DeepL Translator account</td></tr>
+  <tr><td><a href="#google-cloud">Google Cloud</a></td><td>Level 3 (translation API), level 4 cloud OCR</td><td>Billing account</td><td>Cloud Translation API, Cloud Vision API</td></tr>
+  <tr><td><a href="#microsoft">Microsoft Translator</a></td><td>Level 3 (translation API)</td><td>Azure account (free tier available)</td><td>Global region recommended</td></tr>
+</table>
+
+<h2 id="app">Enter the key in ToonLens (same for every provider)</h2>
+<ol>
+  <li>Create a key on the provider's page and <b>copy</b> it (steps below).</li>
+  <li>In ToonLens, open Settings (gear at the top right). Under "Translation mode" at the top, tap the <b>Level 3</b> or <b>Level 4</b> card (picture ①).</li>
+</ol>
+<figure><img src="img/app-1-en.png" alt="Translation mode cards in ToonLens Settings, with Level 3 and Level 4 marked 1" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>① Tap the Level 3 (text) or Level 4 (vision) card</figcaption></figure>
+<ol start="3">
+  <li>In the "Connect to cloud" window, select the provider (picture ②).</li>
+  <li>If you do not have a key yet, tap "How to get a key" (picture ③). This page opens at that provider's section.</li>
+</ol>
+<figure><img src="img/app-2-en.png" alt="Connect to cloud window, with Gemini marked 2 and the How to get a key link marked 3" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>② Select a provider · ③ How to get a key</figcaption></figure>
+<ol start="5">
+  <li>Scroll the window up. Long-press the "API key" field and paste the key (picture ④). The key shows as dots.</li>
+  <li>You can keep the default model (first line) (picture ⑤).</li>
+  <li>Read the data transfer notice, then tap <b>Agree and use</b> (picture ⑥). The button turns on after you enter a key.</li>
+</ol>
+<figure><img src="img/app-3-en.png" alt="Lower part of the Connect to cloud window, with the API key field marked 4, the model list marked 5, and Agree and use marked 6" loading="lazy" onerror="this.parentNode.className='missing'"><figcaption>④ Paste the key · ⑤ Model (default) · ⑥ Agree and use</figcaption></figure>
+<p class="note">The key is stored encrypted on your device. After you save it, the field does not show it again. To change the key, paste a new key in the same window.</p>
+
+<h2 id="gemini">Google Gemini</h2>
+<p class="muted">Get a key at: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> · Official guide: <a href="https://ai.google.dev/gemini-api/docs/api-key">Gemini API keys</a></p>
+<ol>
+  <li>Sign in to Google AI Studio (<a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>) with your Google account.</li>
+  <li>The first time, accept the Terms of Service. This creates a default project.</li>
+  <li>On the API Keys page, tap <b>Create API key</b>.</li>
+  <li>If asked for a project, select the default project.</li>
+  <li>Copy the new key.</li>
+</ol>
+<p class="note">Each key belongs to a Google Cloud project. For free usage and prices, see Google's Gemini API pricing page. Google can use content sent on the free tier to improve its services.</p>
+
+<h2 id="claude">Anthropic Claude</h2>
+<p class="muted">Get a key at: <a href="https://platform.claude.com/settings/keys">platform.claude.com → Settings → API keys</a> · Official guide: <a href="https://platform.claude.com/docs/en/get-api-key">Get your Claude API key</a></p>
+<ol>
+  <li>Sign up and sign in to the Claude Console (<a href="https://platform.claude.com">platform.claude.com</a>).</li>
+  <li>Buy credits in Settings → <a href="https://platform.claude.com/settings/billing">Billing</a>.</li>
+  <li>In Settings → API keys, tap the button to create a key.</li>
+  <li>Enter a name (for example, toonlens). If asked for a key type and expiration, keep the defaults.</li>
+  <li>Copy the key. It is shown only once.</li>
+</ol>
+<p class="note">The Billing page shows your spend limit. Start with a small amount.</p>
+
+<h2 id="openai">OpenAI</h2>
+<p class="muted">Get a key at: <a href="https://platform.openai.com/api-keys">platform.openai.com → API keys</a> · Official guide: <a href="https://developers.openai.com/api/docs/quickstart">Developer quickstart</a></p>
+<ol>
+  <li>Sign up and sign in to the OpenAI Platform (<a href="https://platform.openai.com">platform.openai.com</a>). A ChatGPT subscription and API billing are separate.</li>
+  <li>On the API keys page, tap <b>Create new secret key</b>.</li>
+  <li>Enter a name, create the key, then copy it. It is shown only once.</li>
+  <li>Add credits on the Billing page. Without credits, usage limits are low.</li>
+</ol>
+
+<h2 id="deepseek">DeepSeek</h2>
+<p class="muted">Get a key at: <a href="https://platform.deepseek.com/api_keys">platform.deepseek.com → API keys</a> · Official guide: <a href="https://api-docs.deepseek.com/">DeepSeek API Docs</a></p>
+<ol>
+  <li>Sign up and sign in to the DeepSeek Platform (<a href="https://platform.deepseek.com">platform.deepseek.com</a>).</li>
+  <li>Add balance on the Top up page. Requests fail without balance.</li>
+  <li>On the API keys page, tap <b>Create new API key</b>.</li>
+  <li>Enter a name, create the key, then copy it.</li>
+</ol>
+<p class="note">DeepSeek servers are in China. Read the notice in the ToonLens "Connect to cloud" window before you choose it.</p>
+
+<h2 id="deepl">DeepL</h2>
+<p class="muted">Get a key at: <a href="https://www.deepl.com/your-account/keys">deepl.com/your-account/keys</a> · Official guide: <a href="https://developers.deepl.com/docs/getting-started/intro">DeepL API getting started</a></p>
+<ol>
+  <li>On the DeepL API plans page (<a href="https://www.deepl.com/pro-api">deepl.com/pro-api</a>), choose <b>DeepL API Free</b> or <b>Pro</b> and sign up.</li>
+  <li>If you already have a DeepL Translator account, sign out and create a new account for the API. DeepL's official guide says to do this.</li>
+  <li>Copy the key on your account's API keys page (<a href="https://www.deepl.com/your-account/keys">your-account/keys</a>).</li>
+</ol>
+<p class="note">A Free key ends with ":fx". ToonLens detects this and uses the Free API address (api-free.deepl.com).</p>
+
+<h2 id="google-cloud">Google Cloud (translation API and cloud OCR)</h2>
+<p class="muted">Get a key at: <a href="https://console.cloud.google.com/apis/credentials">console.cloud.google.com → APIs &amp; Services → Credentials</a> · Official guide: <a href="https://docs.cloud.google.com/docs/authentication/api-keys">Manage API keys</a></p>
+<ol>
+  <li>Open the Google Cloud console (<a href="https://console.cloud.google.com">console.cloud.google.com</a>) and create a project.</li>
+  <li>Link a billing account.</li>
+  <li>In APIs &amp; Services → Library, <b>enable</b> the APIs you need. You must enable an API before you can select it in key restrictions.
+    <ul><li>Translation API (level 3): <b>Cloud Translation API</b></li><li>Level 4 cloud OCR: <b>Cloud Vision API</b></li></ul></li>
+  <li>In APIs &amp; Services → <b>Credentials</b>, tap <b>Create credentials → API key</b>.</li>
+  <li>Under API restrictions, select only the APIs you enabled, then save.</li>
+  <li>Copy the key in the "API key created" window.</li>
+</ol>
+<p class="note">A Gemini key (AI Studio) and a Google Cloud key can be different. Enter a translation API key in the "Connect to cloud" window after you select "Google Cloud Translation". Enter a cloud OCR key in Settings → "Advanced: translation services and API keys" → "Google Cloud Vision".</p>
+
+<h2 id="microsoft">Microsoft Translator</h2>
+<p class="muted">Get a key at: <a href="https://portal.azure.com">portal.azure.com → Translator resource → Keys and Endpoint</a> · Official guide: <a href="https://learn.microsoft.com/azure/ai-services/translator/how-to/create-translator-resource">Create a Translator resource</a></p>
+<ol>
+  <li>Create an Azure account and sign in to the Azure portal (<a href="https://portal.azure.com">portal.azure.com</a>).</li>
+  <li>Open <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesTextTranslation">Create a Translator resource</a>.</li>
+  <li>Enter the subscription, resource group, and name. Select <b>Global</b> as the region.</li>
+  <li>You can select the free pricing tier (F0). Each subscription can have one free tier resource.</li>
+  <li>Tap <b>Review + Create</b> → <b>Create</b>. When it finishes, tap <b>Go to resource</b>.</li>
+  <li>In the left pane, under Resource Management, open <b>Keys and Endpoint</b> and copy "KEY 1".</li>
+</ol>
+<p class="note">If you created the resource in a region other than Global (for example, koreacentral), enter that region in ToonLens Settings → "Advanced: translation services and API keys" → Microsoft.</p>
+
+<h2>Troubleshooting</h2>
+<table>
+  <tr><th>What you see</th><th>Meaning</th><th>What to do</th></tr>
+  <tr><td>401, 403, invalid key</td><td>The key is wrong or deleted</td><td>Copy and paste the key again. Check for spaces before or after it</td></tr>
+  <tr><td>402, insufficient balance, credit</td><td>No balance or credits</td><td>Add funds on the provider's Billing page</td></tr>
+  <tr><td>429, rate limit, quota</td><td>Usage limit reached</td><td>Try again later. Raise the limit or use another provider</td></tr>
+  <tr><td>"Switched to on-device translation"</td><td>The cloud request failed</td><td>Check the rows above. If it still fails, tell us in Settings → Report a problem</td></tr>
+</table>
+
+<footer>ToonLens · <a href="../../privacy.html">Privacy Policy</a> · Contact <a href="mailto:depreciation84@gmail.com">depreciation84@gmail.com</a><br>Provider names are trademarks of their owners. Provider screen names can change. If they changed, follow each provider's official guide.</footer>
+</body>
+</html>
