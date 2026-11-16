@@ -1,6 +1,6 @@
 {
   "format": "swapday-presets",
-  "version": 3,
+  "version": 4,
   "updated": "2026-11-16",
   "language": "ko",
   "categories": [
@@ -9,6 +9,7 @@
     { "id": "air_conditioner", "name": "에어컨", "emoji": "❄️" },
     { "id": "car", "name": "차량", "emoji": "🚗" },
     { "id": "home", "name": "생활", "emoji": "🏠" },
+    { "id": "bedroom", "name": "침실·침구", "emoji": "🛏️" },
     { "id": "safety", "name": "안전", "emoji": "🔥" },
     { "id": "pet", "name": "반려동물", "emoji": "🐶" },
     { "id": "appliance", "name": "가전", "emoji": "🧺" },
@@ -196,7 +197,7 @@
       "sourceUrl": "https://www.lge.co.kr/support/solutions-20150585408080", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_hood_filter", "category": "home", "name": "레인지후드 필터 청소", "aliases": ["후드 필터", "기름 필터"],
+      "id": "home_hood_filter", "category": "kitchen", "name": "레인지후드 필터 청소", "aliases": ["후드 필터", "기름 필터"],
       "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 3,
       "note": "금속 망 필터 청소 기준입니다. 튀김·볶음 요리가 많으면 더 자주 청소합니다. 탄소(활성탄) 필터는 씻지 않고 교체합니다.",
@@ -212,7 +213,7 @@
       "sourceUrl": "https://www.dyson.co.uk/support/vacuum-cleaners/cordless/filter-care", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_sponge", "category": "home", "name": "주방 수세미", "aliases": ["수세미", "스펀지"],
+      "id": "home_sponge", "category": "kitchen", "name": "주방 수세미", "aliases": ["수세미", "스펀지"],
       "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 1, "max": 2, "unit": "WEEK" },
       "distanceKm": null, "notifyDaysBefore": 1,
       "note": "냄새가 나거나 더러워 보이면 바로 교체합니다. 미국 일리노이대 확장교육원은 수세미·행주를 매일 깨끗한 것으로 바꾸고 세탁·소독하라고 권합니다.",
@@ -220,7 +221,7 @@
       "sourceUrl": "https://www.cronista.com/en/today/frank-esper-health-expert-kitchen-sponges-should-be-changed-at-least-every-two-weeks/", "checked": "2026-10-13", "verified": false
     },
     {
-      "id": "home_pillow", "category": "home", "name": "베개", "aliases": ["베개 교체"],
+      "id": "home_pillow", "category": "bedroom", "name": "베개", "aliases": ["베개 교체"],
       "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 14,
       "note": "소재별: 메모리폼 2~3년, 라텍스 2~4년, 다운·깃털 1~3년, 폴리에스터 6개월~2년. 반으로 접었을 때 펴지지 않으면 교체합니다. 베갯잇은 매주 세탁합니다.",
@@ -228,7 +229,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/pillows/how-often-should-you-replace-your-pillow", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_mattress_rotate", "category": "home", "name": "매트리스 회전", "aliases": ["매트리스 돌리기"],
+      "id": "home_mattress_rotate", "category": "bedroom", "name": "매트리스 회전", "aliases": ["매트리스 돌리기"],
       "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "폼·라텍스·최신 스프링 매트리스 기준입니다. 오래된 스프링 매트리스는 2~6개월입니다. 회전하면 안 되는 제품도 있으니 설명서를 먼저 확인합니다.",
@@ -300,7 +301,7 @@
       "sourceUrl": "https://www.brita.com/products/standard-replacement-filters/", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_washer_tub", "category": "home", "name": "세탁조 청소", "aliases": ["통세척", "세탁기 청소"],
+      "id": "home_washer_tub", "category": "appliance", "name": "세탁조 청소", "aliases": ["통세척", "세탁기 청소"],
       "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
       "distanceKm": null, "notifyDaysBefore": 3,
       "note": "6개월 이상 하지 않았다면 연속으로 3번 합니다. 드럼 세탁기는 약 30회 사용 또는 tCL 표시 때 통살균합니다.",
@@ -308,7 +309,7 @@
       "sourceUrl": "https://www.lge.co.kr/support/solutions-1430889036106", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_sheets", "category": "home", "name": "침대 시트 세탁", "aliases": ["침구 세탁", "이불 커버 세탁"],
+      "id": "home_sheets", "category": "bedroom", "name": "침대 시트 세탁", "aliases": ["침구 세탁", "이불 커버 세탁"],
       "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
       "distanceKm": null, "notifyDaysBefore": 1,
       "note": "매일 자지 않는 침대는 2주에 한 번도 됩니다. 반려동물과 같이 자면 3~4일마다 세탁합니다.",
@@ -316,7 +317,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-often-should-you-wash-your-sheets", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_mattress_replace", "category": "home", "name": "매트리스 교체", "aliases": ["매트리스 수명"],
+      "id": "home_mattress_replace", "category": "bedroom", "name": "매트리스 교체", "aliases": ["매트리스 수명"],
       "recommended": { "amount": 7, "unit": "YEAR" }, "range": { "min": 6, "max": 8, "unit": "YEAR" },
       "distanceKm": null, "notifyDaysBefore": 30,
       "note": "꺼짐·소음이 생기거나 자고 나서 몸이 뻣뻣하면 연한 전이라도 교체합니다. 라텍스는 8년 넘게 갑니다.",
@@ -636,7 +637,7 @@
       "sourceUrl": "https://www.fda.gov/cosmetics/cosmetic-products/eye-cosmetic-safety", "checked": "2026-11-16", "verified": true
     },
     {
-      "id": "home_comforter_wash", "category": "home", "name": "이불·담요 세탁", "aliases": ["이불 빨래", "담요 빨래"],
+      "id": "home_comforter_wash", "category": "bedroom", "name": "이불·담요 세탁", "aliases": ["이불 빨래", "담요 빨래"],
       "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "이불 커버나 겉 시트를 쓰면 속 이불은 1년에 1~2회, 커버 없이 쓰거나 알레르기·반려동물·땀이 많으면 3~6개월마다 빱니다. 커버는 1~2주마다 따로 빱니다.",
@@ -644,7 +645,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-to-wash-a-down-comforter", "checked": "2026-11-16", "verified": true
     },
     {
-      "id": "home_duvet_replace", "category": "home", "name": "이불(솜) 교체", "aliases": ["이불솜", "구스 이불"],
+      "id": "home_duvet_replace", "category": "bedroom", "name": "이불(솜) 교체", "aliases": ["이불솜", "구스 이불"],
       "recommended": { "amount": 10, "unit": "YEAR" }, "range": { "min": 10, "max": 15, "unit": "YEAR" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "다운(거위털·오리털) 이불 기준입니다. 합성솜은 더 빨리 부풀음을 잃습니다. 뭉침·냄새·보온력 저하가 보이면 더 일찍 바꿉니다.",

@@ -1,6 +1,6 @@
 {
   "format": "swapday-presets",
-  "version": 3,
+  "version": 4,
   "updated": "2026-11-16",
   "language": "en",
   "categories": [
@@ -9,6 +9,7 @@
     { "id": "air_conditioner", "name": "Air conditioner", "emoji": "❄️" },
     { "id": "car", "name": "Car", "emoji": "🚗" },
     { "id": "home", "name": "Home", "emoji": "🏠" },
+    { "id": "bedroom", "name": "Bedroom", "emoji": "🛏️" },
     { "id": "safety", "name": "Safety", "emoji": "🔥" },
     { "id": "pet", "name": "Pets", "emoji": "🐶" },
     { "id": "appliance", "name": "Appliances", "emoji": "🧺" },
@@ -196,7 +197,7 @@
       "sourceUrl": "https://www.samsung.com/sg/support/home-appliances/how-often-to-change-the-water-filter-for-samsung-refrigerator/", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_hood_filter", "category": "home", "name": "Range hood filter cleaning", "aliases": ["Grease filter", "Hood filter"],
+      "id": "home_hood_filter", "category": "kitchen", "name": "Range hood filter cleaning", "aliases": ["Grease filter", "Hood filter"],
       "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 3,
       "note": "For metal mesh grease filters. Clean them more often if you fry or stir-fry a lot. Replace carbon filters; do not wash them.",
@@ -212,7 +213,7 @@
       "sourceUrl": "https://www.dyson.co.uk/support/vacuum-cleaners/cordless/filter-care", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_sponge", "category": "home", "name": "Kitchen sponge", "aliases": ["Sponge", "Dish scrubber"],
+      "id": "home_sponge", "category": "kitchen", "name": "Kitchen sponge", "aliases": ["Sponge", "Dish scrubber"],
       "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 1, "max": 2, "unit": "WEEK" },
       "distanceKm": null, "notifyDaysBefore": 1,
       "note": "Replace it now if it smells or looks dirty. University of Illinois Extension advises switching sponges and dish rags for clean ones every day and washing or sanitizing them.",
@@ -220,7 +221,7 @@
       "sourceUrl": "https://www.cronista.com/en/today/frank-esper-health-expert-kitchen-sponges-should-be-changed-at-least-every-two-weeks/", "checked": "2026-10-13", "verified": false
     },
     {
-      "id": "home_pillow", "category": "home", "name": "Pillow", "aliases": ["Bed pillow"],
+      "id": "home_pillow", "category": "bedroom", "name": "Pillow", "aliases": ["Bed pillow"],
       "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 14,
       "note": "By fill: memory foam 2 to 3 years, latex 2 to 4 years, down or feather 1 to 3 years, polyester 6 months to 2 years. Replace it if it stays folded when you fold it in half. Wash pillowcases weekly.",
@@ -228,7 +229,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/pillows/how-often-should-you-replace-your-pillow", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_mattress_rotate", "category": "home", "name": "Mattress rotation", "aliases": ["Rotate mattress"],
+      "id": "home_mattress_rotate", "category": "bedroom", "name": "Mattress rotation", "aliases": ["Rotate mattress"],
       "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "For foam, latex and newer innerspring mattresses. Older innerspring: 2 to 6 months. Some mattresses must not be rotated, so check the manual first.",
@@ -300,7 +301,7 @@
       "sourceUrl": "https://www.brita.com/products/standard-replacement-filters/", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_washer_tub", "category": "home", "name": "Washer tub cleaning", "aliases": ["Tub clean", "Washing machine cleaning"],
+      "id": "home_washer_tub", "category": "appliance", "name": "Washer tub cleaning", "aliases": ["Tub clean", "Washing machine cleaning"],
       "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
       "distanceKm": null, "notifyDaysBefore": 3,
       "note": "If you skipped it for 6 months or more, run it 3 times in a row. Front loaders: run Tub Clean after about 30 washes or when tCL appears.",
@@ -308,7 +309,7 @@
       "sourceUrl": "https://www.lge.co.kr/support/solutions-1430889036106", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_sheets", "category": "home", "name": "Bed sheet washing", "aliases": ["Wash bedding", "Duvet cover wash"],
+      "id": "home_sheets", "category": "bedroom", "name": "Bed sheet washing", "aliases": ["Wash bedding", "Duvet cover wash"],
       "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
       "distanceKm": null, "notifyDaysBefore": 1,
       "note": "If you do not sleep in the bed every day, every 2 weeks can be enough. If pets sleep in the bed, wash every 3 to 4 days.",
@@ -316,7 +317,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-often-should-you-wash-your-sheets", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "home_mattress_replace", "category": "home", "name": "Mattress replacement", "aliases": ["Mattress lifespan"],
+      "id": "home_mattress_replace", "category": "bedroom", "name": "Mattress replacement", "aliases": ["Mattress lifespan"],
       "recommended": { "amount": 7, "unit": "YEAR" }, "range": { "min": 6, "max": 8, "unit": "YEAR" },
       "distanceKm": null, "notifyDaysBefore": 30,
       "note": "Replace it sooner if it sags, gets noisy, or you wake up stiff. Latex can last more than 8 years.",
@@ -636,7 +637,7 @@
       "sourceUrl": "https://www.fda.gov/cosmetics/cosmetic-products/eye-cosmetic-safety", "checked": "2026-11-16", "verified": true
     },
     {
-      "id": "home_comforter_wash", "category": "home", "name": "Comforter and blanket washing", "aliases": ["Wash duvet"],
+      "id": "home_comforter_wash", "category": "bedroom", "name": "Comforter and blanket washing", "aliases": ["Wash duvet"],
       "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "With a duvet cover or top sheet, wash the comforter once or twice a year. Wash it every 3 to 6 months without a cover, or with allergies, pets or heavy sweating. Wash the cover every 1 to 2 weeks.",
@@ -644,7 +645,7 @@
       "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-to-wash-a-down-comforter", "checked": "2026-11-16", "verified": true
     },
     {
-      "id": "home_duvet_replace", "category": "home", "name": "Comforter replacement", "aliases": ["Duvet insert"],
+      "id": "home_duvet_replace", "category": "bedroom", "name": "Comforter replacement", "aliases": ["Duvet insert"],
       "recommended": { "amount": 10, "unit": "YEAR" }, "range": { "min": 10, "max": 15, "unit": "YEAR" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "This figure is for down comforters. Synthetic fill loses loft faster. Replace sooner if it clumps, smells or no longer keeps you warm.",
