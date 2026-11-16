@@ -1,7 +1,7 @@
 {
   "format": "swapday-presets",
-  "version": 2,
-  "updated": "2026-10-13",
+  "version": 3,
+  "updated": "2026-11-16",
   "language": "ko",
   "categories": [
     { "id": "water_purifier", "name": "정수기", "emoji": "💧" },
@@ -10,7 +10,13 @@
     { "id": "car", "name": "차량", "emoji": "🚗" },
     { "id": "home", "name": "생활", "emoji": "🏠" },
     { "id": "safety", "name": "안전", "emoji": "🔥" },
-    { "id": "pet", "name": "반려동물", "emoji": "🐶" }
+    { "id": "pet", "name": "반려동물", "emoji": "🐶" },
+    { "id": "appliance", "name": "가전", "emoji": "🧺" },
+    { "id": "kitchen", "name": "주방", "emoji": "🍳" },
+    { "id": "bathroom", "name": "욕실·위생", "emoji": "🛁" },
+    { "id": "motorcycle", "name": "오토바이", "emoji": "🏍️" },
+    { "id": "bike", "name": "자전거", "emoji": "🚲" },
+    { "id": "baby", "name": "육아", "emoji": "🍼" }
   ],
   "parts": [
     {
@@ -348,6 +354,566 @@
       "note": "분말소화기 기준, 제조년월부터 셉니다. 성능확인 검사에 합격하면 1회에 한해 3년 연장할 수 있습니다.",
       "source": "한국소방산업기술원 — 내용연수(제조 후 10년)가 지난 분말소화기는 교체 또는 성능확인",
       "sourceUrl": "https://www.kfsi.or.kr/contents/webzine/201703/sub02-01.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ac_outdoor_clean", "category": "air_conditioner", "name": "에어컨 실외기 청소", "aliases": ["실외기"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "여름 전에 실외기 주변 물건을 치우고 열교환기 먼지를 닦아 낸다. 전원을 끄고 하며, 높은 곳은 서비스센터에 맡긴다.",
+      "source": "Carrier(에어컨 제조사)는 실내 코일과 실외 응축기를 최소 연 1회 정밀 청소하라고 안내함",
+      "sourceUrl": "https://www.carrier.com/us/en/residential/hvac-resources/air-conditioners/how-to-clean-an-ac-unit.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "ac_deep_clean", "category": "air_conditioner", "name": "에어컨 내부 분해 청소", "aliases": ["열교환기 세척"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "열교환기와 송풍팬은 전문 장비가 필요하다. 냄새가 나거나 냉방이 약하면 더 빨리 맡긴다.",
+      "source": "Carrier(에어컨 제조사)는 실내 코일과 실외 응축기를 최소 연 1회 정밀 청소하라고 안내함. LG전자는 분해 세척 서비스(LG 베스트 케어)를 제공하나 주기는 밝히지 않음",
+      "sourceUrl": "https://www.carrier.com/us/en/residential/hvac-resources/air-conditioners/how-to-clean-an-ac-unit.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "wp_self_sanitize", "category": "water_purifier", "name": "정수기 셀프 살균", "aliases": ["출수구 살균"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "냉온정 모델은 출수 버튼으로 뜨거운 물을 내보내 출수구를 살균한다. 나온 뜨거운 물은 버린다.",
+      "source": "LG전자 고객지원: 출수구는 3개월에 한 번 살균(퓨리케어 듀얼 정수기). 직수관은 1주 1회 자동 살균",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20152764443954", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "ap_sensor_clean", "category": "air_purifier", "name": "공기청정기 센서 청소", "aliases": ["먼지 센서"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "전원 플러그를 뽑고 센서 덮개를 연다. 물을 살짝 묻힌 면봉으로 렌즈를 닦고 마른 면봉으로 물기를 없앤다.",
+      "source": "LG전자 고객지원: PM1.0 센서는 두 달에 한 번 청소",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150615143585", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_filter", "category": "appliance", "name": "로봇청소기 필터", "aliases": ["먼지통 필터"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "먼지통 필터는 자주 털고 마르게 한다. 교체 주기는 모델마다 다르며 마모가 보이면 교체한다.",
+      "source": "iRobot 지원: 필터 3~6개월마다 교체(Roomba 100/1000). 로보락 사용설명서: 세척 필터 6~12개월",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_side_brush", "category": "appliance", "name": "로봇청소기 사이드 브러시", "aliases": ["사이드브러시"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "엉킨 머리카락은 한 달에 한 번 제거한다. 털이 휘거나 닳으면 교체 시기다.",
+      "source": "iRobot 지원(가장자리 청소 브러시) 3~6개월, 로보락 사용설명서 3~6개월",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_main_brush", "category": "appliance", "name": "로봇청소기 메인 브러시", "aliases": ["메인브러시", "롤러 브러시"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "머리카락이 감기면 칼로 풀어 낸다. 베어링이 소리를 내거나 닳으면 더 빨리 교체한다.",
+      "source": "iRobot 지원 6~12개월, 로보락 사용설명서 6~12개월",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_mop_pad", "category": "appliance", "name": "로봇청소기 물걸레 패드", "aliases": ["물걸레"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 1, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "쓴 뒤에는 빨아서 말린다. 냄새가 나거나 올이 닳으면 교체한다.",
+      "source": "iRobot 지원 3~6개월(Roomba 100/1000), 로보락 사용설명서 1~3개월",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_vacuum_bag", "category": "appliance", "name": "청소기 먼지봉투", "aliases": ["먼지 봉투"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "봉투 가득 표시등이 켜지면 바로 교체한다. 표시 전에도 냄새가 나면 교체한다.",
+      "source": "LG전자 고객지원: LG 컴팩트 타워 먼지비움 충전대의 먼지봉투를 1~2개월 내 교체 권장",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20155192159949", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_dehumid_dustnet", "category": "appliance", "name": "제습기 먼지망 세척", "aliases": ["극세필터"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "진공청소기나 부드러운 솔로 먼지를 턴다. 심하면 중성 세제와 40도 미만 물로 씻는다.",
+      "source": "LG전자 고객지원: 극세필터(먼지망) 청소 주기는 1개월",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150464095311", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_washer_gasket", "category": "appliance", "name": "세탁기 고무패킹 청소", "aliases": ["고무 가스켓"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "산소계 표백제를 푼 따뜻한 물로 닦고 문을 열어 말린다. 염소계 표백제는 쓰지 않는다.",
+      "source": "LG전자 고객지원: 고무 패킹은 한 달에 한 번 산소계 표백제로 청소",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-1436232784400", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_washer_drain_filter", "category": "appliance", "name": "세탁기 배수 필터 청소", "aliases": ["배수 거름망", "펌프 필터"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "물을 빼고 필터를 돌려 빼낸 뒤 이물질을 씻는다. 통 안에 뜨거운 물이 없는지 먼저 확인한다.",
+      "source": "삼성전자(미국): 배수 펌프 필터는 최소 월 1회 또는 약 40회 세탁마다. 삼성(캐나다)은 1~3개월. LG전자는 주기적으로 청소하라고만 안내",
+      "sourceUrl": "https://www.samsung.com/us/support/answer/ANS10003197/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_dryer_duct", "category": "appliance", "name": "건조기 배기 덕트 청소", "aliases": ["배기구"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "자주 건조하거나 건조 시간이 길어지면 더 자주 청소한다. 철저한 청소는 전문가에게 맡기는 편이 안전하다.",
+      "source": "삼성전자(캐나다): 배기구는 최소 연 1회 점검, 건조를 자주 하면 더 자주(연 1~2회 청소 안내도 있음)",
+      "sourceUrl": "https://www.samsung.com/ca/support/home-appliances/how-to-clean-your-samsung-dryer/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_dishwasher_filter", "category": "kitchen", "name": "식기세척기 필터 청소", "aliases": ["배수 필터", "거름망"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 2, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "음식 찌꺼기가 많거나 냄새·배수 불량이 생기면 더 자주 닦습니다.",
+      "source": "보쉬 영국 지원: 필터를 최소 2주마다 청소. 삼성 지원(중동 페이지): 2~4주마다 청소",
+      "sourceUrl": "https://www.bosch-home.co.uk/en/c/spotlight/bltdb88363c39b11bb1/customer-service/dishwasher-hub/clean-dishwasher", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_dishwasher_tub", "category": "kitchen", "name": "식기세척기 내부 세척", "aliases": ["세척기 청소"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "빈 상태로 세척기 청소 코스를 돌립니다. 모델에 코스가 없으면 설명서를 따릅니다.",
+      "source": "보쉬 영국 지원: 세척 프로그램을 최소 2개월마다 실행",
+      "sourceUrl": "https://www.bosch-home.co.uk/en/c/spotlight/bltdb88363c39b11bb1/customer-service/dishwasher-hub/clean-dishwasher", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_fridge_coil", "category": "kitchen", "name": "냉장고 응축기 코일 청소", "aliases": ["냉장고 기계실", "냉장고 뒷면 먼지"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "전원을 뽑고 진공청소기나 브러시로 먼지를 제거합니다. 반려동물이 있으면 더 자주 합니다.",
+      "source": "삼성전자서비스: 냉장고 기계실을 1년에 한 번 정도 청소(검색 요약으로 확인, 페이지 미열람). 보쉬 영국 지원: 코일을 6~12개월마다 청소",
+      "sourceUrl": "https://www.bosch-home.co.uk/customer-service/get-support/cooling-and-freezing/cleaning-fridge-coils", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_kettle_descale", "category": "kitchen", "name": "전기포트 물때 제거", "aliases": ["포트 구연산", "전기주전자 청소"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "경수 지역이나 사용이 많으면 더 자주 합니다. 제조사 방법(구연산·식초)을 따릅니다.",
+      "source": "생활 가이드 여러 곳이 월 1회 안내(검색 요약만 확인, 제조사 공식 값 없음)",
+      "sourceUrl": "https://www.bobvila.com/articles/how-to-descale-a-kettle/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_coffee_descale", "category": "kitchen", "name": "커피머신 석회 제거", "aliases": ["디스케일링", "커피머신 구연산"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "물이 딱딱하거나 사용량이 많으면 짧게 잡습니다. 기기에 알림이 있으면 알림을 따릅니다.",
+      "source": "네스프레소 한국 FAQ: 주 40잔 기준 6개월마다. 네스프레소 미국 FAQ: 3개월 또는 캡슐 300개 중 먼저 오는 때",
+      "sourceUrl": "https://www.contact.nespresso.com/faq/kr/en/detail/11078", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_coffee_filter", "category": "kitchen", "name": "커피머신 물탱크 필터", "aliases": ["커피머신 정수 필터"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "경도가 높거나 사용량이 많으면 짧게 잡습니다. 브리타 필터는 4주 기준입니다.",
+      "source": "드롱기 FAQ: 일반 조건에서 필터 2개월. 브리타 영국 FAQ: MAXTRA PRO 카트리지는 최소 4주마다 교체",
+      "sourceUrl": "https://www.delonghi.com/en-us/faqs/De%27Longhi-Fully-Automatic-Coffee-Machine-Accessories---Water-Filter/a/83346", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_cooker_gasket", "category": "kitchen", "name": "밥솥 고무패킹", "aliases": ["밥솥 패킹", "압력 패킹"],
+      "recommended": { "amount": 2, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "증기가 새거나 뚜껑이 뻑뻑하면 바로 교체합니다. 패킹은 모델 전용입니다.",
+      "source": "쿠쿠 미국 지원센터: 2~3년마다 교체(검색 요약으로 확인, 페이지 미열람). 일부 쿠쿠 모델 설명서: 12개월(판매처 목록 요약)",
+      "sourceUrl": "https://cuckooamerica.com/apps/help-center", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_foodwaste_filter", "category": "kitchen", "name": "음식물 처리기 필터", "aliases": ["음식물처리기 활성탄"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "모델마다 다릅니다. 냄새가 나면 주기 전에 교체합니다.",
+      "source": "스마트카라 제품 페이지: 활성탄 필터 최대 6개월(검색 요약). 비교 블로그: 3~4개월. 모델별 공식 문서 미확인",
+      "sourceUrl": "https://gola4u.com/best-food-waste-disposer/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_nonstick_pan", "category": "kitchen", "name": "코팅 프라이팬", "aliases": ["테팔 팬", "논스틱 팬"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 5, "max": 7, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "코팅이 벗겨지거나 심하게 긁히면 기간과 관계없이 교체합니다.",
+      "source": "미국 쿡웨어·베이크웨어 협회 관계자(America's Test Kitchen 인용): 품질 좋은 코팅은 5~7년",
+      "sourceUrl": "https://www.americastestkitchen.com/articles/5117-how-often-should-i-replace-my-nonstick-pan", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_dishcloth", "category": "kitchen", "name": "행주·주방 타월", "aliases": ["행주", "주방 수건"],
+      "recommended": { "amount": 1, "unit": "DAY" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 0,
+      "note": "생고기·생선 국물을 닦았으면 바로 교체합니다. 세탁기 고온 코스로 빱니다.",
+      "source": "미네소타대 확장센터: 행주는 매일 교체(검색 요약, 페이지 접근 거부). 미국 농무부 FSIS: 행주를 자주 세탁기 온수 코스로 세탁",
+      "sourceUrl": "https://extension.umn.edu/sanitation-and-preventing-illness/clean-kitchen-required-food-safety", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_bidet_nozzle", "category": "bathroom", "name": "비데 노즐 청소·교체", "aliases": ["비데 노즐", "노즐팁"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 2, "max": 4, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "모델마다 다릅니다. 노즐팁 제조사 안내를 확인합니다.",
+      "source": "코웨이 렌탈 판매 페이지(렌트리): 노즐팁 2개월 또는 4개월. 공식 설명서 미확인",
+      "sourceUrl": "https://rentre.kr/product/1600007917/%EC%8A%A4%ED%83%80%EC%9D%BC-%EB%B9%84%EB%8D%B0", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_bidet_filter", "category": "bathroom", "name": "비데 정수 필터", "aliases": ["비데 필터", "프리마이크로 필터"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 4, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "정품 필터를 모델명에 맞게 고릅니다.",
+      "source": "코웨이 렌탈 판매 페이지: 프리마이크로 필터 4개월. 비교 블로그: 4~6개월. 공식 설명서 미확인",
+      "sourceUrl": "https://rentre.kr/product/1600007917/%EC%8A%A4%ED%83%80%EC%9D%BC-%EB%B9%84%EB%8D%B0", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_towel", "category": "bathroom", "name": "목욕 수건", "aliases": ["수건 세탁", "타월"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "습한 집이나 여름에는 주 2~3회 빱니다.",
+      "source": "클리블랜드 클리닉: 목욕 수건은 최소 주 1회 세탁 또는 교체",
+      "sourceUrl": "https://health.clevelandclinic.org/how-often-should-you-wash-your-germ-magnet-of-a-bath-towel", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_scrubber", "category": "bathroom", "name": "샤워볼·때수건", "aliases": ["샤워볼", "때수건", "루파"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": { "min": 3, "max": 8, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "천연 루파는 3~4주, 플라스틱 샤워볼은 최대 2개월입니다. 곰팡이나 냄새가 나면 바로 버립니다.",
+      "source": "클리블랜드 클리닉: 천연 루파 3~4주, 플라스틱 2개월",
+      "sourceUrl": "https://health.clevelandclinic.org/loofahs-can-double-as-bacterial-breeding-grounds", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_shower_curtain", "category": "bathroom", "name": "샤워 커튼", "aliases": ["샤워 커튼 라이너", "욕실 커튼"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "교체 대신 세탁기에서 식초나 표백제로 헹굴 수도 있습니다.",
+      "source": "클리블랜드 클리닉 피부과 전문의: 샤워 라이너를 6개월~1년마다 교체",
+      "sourceUrl": "https://health.clevelandclinic.org/can-your-dirty-shower-curtain-make-you-sick", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_mat", "category": "bathroom", "name": "욕실 발매트", "aliases": ["발매트", "욕실 매트"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": { "min": 1, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "세탁 표시를 확인한 뒤 빱니다. 완전히 말립니다.",
+      "source": "욕실 청소 가이드(Angi 등): 최소 주 1회, 다른 자료는 월 1회(검색 요약). 공공기관 자료 없음",
+      "sourceUrl": "https://angi.com/articles/how-often-should-you-clean-your-bathroom.htm", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_vent_fan", "category": "bathroom", "name": "욕실 환풍기 청소", "aliases": ["환풍기 그릴", "욕실 환기구"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "전원을 끄고 그릴의 먼지를 닦습니다.",
+      "source": "국내 생활 기사(위키트리): 그릴을 한 달에 한 번 정도 닦기(검색 요약). 공식 자료 없음",
+      "sourceUrl": "https://www.wikitree.co.kr/articles/1159686", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_razor_blade", "category": "bathroom", "name": "면도날", "aliases": ["면도기 날", "면도날 교체"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "5중날은 약 20회, 3중날은 약 15회 면도 후 교체합니다. 당김이나 자극이 생기면 더 일찍 바꿉니다.",
+      "source": "질레트 미국: 보통 5~10회 면도마다, 매일 면도하면 약 주 1회, Fusion5·ProGlide 약 20회",
+      "sourceUrl": "https://gillette.com/en-us/shaving-tips/how-to-shave/how-often-should-you-change-your-razor", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_hairbrush", "category": "bathroom", "name": "헤어브러시", "aliases": ["빗", "헤어 브러쉬"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "털이 휘거나 빠지거나 코팅이 갈라지면 바로 교체합니다. 1~2주마다 머리카락을 제거합니다.",
+      "source": "피부과 전문의 인용 기사: 6개월마다 교체, 일반 가이드 6~12개월(검색 요약)",
+      "sourceUrl": "https://ca.finance.yahoo.com/news/often-replace-hairbrush-hint-probably-214906618.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_makeup_sponge", "category": "bathroom", "name": "메이크업 스펀지", "aliases": ["뷰티블렌더", "퍼프"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 1, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "AAD는 사용할 때마다 세척하라고 안내합니다. 갈라지거나 냄새가 나면 바로 교체합니다.",
+      "source": "미국피부과학회(AAD): 스펀지는 매번 사용 후 세척(교체 주기 없음). 교체 1~3개월은 미용 매체 요약",
+      "sourceUrl": "https://www.aad.org/public/everyday-care/skin-care-secrets/prevent-skin-problems/replace-makeup-sunscreen", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_makeup_brush", "category": "bathroom", "name": "메이크업 브러시", "aliases": ["화장 브러시", "파운데이션 브러시"],
+      "recommended": { "amount": 7, "unit": "DAY" }, "range": { "min": 7, "max": 10, "unit": "DAY" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "순한 샴푸로 털끝만 헹구고 눕혀서 말립니다.",
+      "source": "미국피부과학회(AAD): 브러시를 7~10일마다 세척",
+      "sourceUrl": "https://www.aad.org/public/everyday-care/skin-care-secrets/routine/clean-your-makeup-brushes", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_mascara", "category": "bathroom", "name": "마스카라", "aliases": ["마스카라 교체"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 2, "max": 4, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "마르거나 눈이 따갑다면 바로 버립니다. 눈 감염 뒤에는 사용하던 제품을 버립니다.",
+      "source": "AAD: 마스카라 수명 3개월. 미국 FDA: 제조사들은 보통 구매 후 2~4개월에 버리기를 권장",
+      "sourceUrl": "https://www.fda.gov/cosmetics/cosmetic-products/eye-cosmetic-safety", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_comforter_wash", "category": "home", "name": "이불·담요 세탁", "aliases": ["이불 빨래", "담요 빨래"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "이불 커버나 겉 시트를 쓰면 속 이불은 1년에 1~2회, 커버 없이 쓰거나 알레르기·반려동물·땀이 많으면 3~6개월마다 빱니다. 커버는 1~2주마다 따로 빱니다.",
+      "source": "수면재단(Sleep Foundation) 원문: 커버·시트 사용 시 연 1~2회, 커버 없음·알레르기·반려동물·땀 많음 3~6개월, 커버는 1~2주마다. 담요는 같은 방식을 참고(담요 전용 수치는 확인하지 못함)",
+      "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-to-wash-a-down-comforter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_duvet_replace", "category": "home", "name": "이불(솜) 교체", "aliases": ["이불솜", "구스 이불"],
+      "recommended": { "amount": 10, "unit": "YEAR" }, "range": { "min": 10, "max": 15, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "다운(거위털·오리털) 이불 기준입니다. 합성솜은 더 빨리 부풀음을 잃습니다. 뭉침·냄새·보온력 저하가 보이면 더 일찍 바꿉니다.",
+      "source": "수면재단: 다운 이불은 관리를 잘하면 10~15년 이상 사용 가능",
+      "sourceUrl": "https://www.sleepfoundation.org/best-bedding/best-down-comforter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_cleaning_cloth", "category": "home", "name": "청소 걸레(극세사 천)", "aliases": ["극세사 걸레"],
+      "recommended": { "amount": 1, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "제조사가 말하는 보증 기간이라 매일 쓰면 더 일찍 닳을 수 있습니다. 헹궈 짜고 주 1회 세탁하며, 표백제·섬유유연제는 피합니다.",
+      "source": "E-Cloth(제조사) 관리 안내: 범용 천 3년 또는 300회 세탁 보증. 같은 회사 일부 제품 페이지는 1년 또는 100회라 범위로 적음",
+      "sourceUrl": "https://www.e-cloth.com/pages/care", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_doorlock_battery", "category": "home", "name": "도어락 건전지 점검·교체", "aliases": ["디지털 도어락 배터리"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "6개월마다 건전지 상태(누액)를 점검합니다. 경보음·교체 표시등이 나오면 바로 전부 새 건전지로 바꿉니다. 사용 횟수에 따라 수명은 약 10~12개월입니다.",
+      "source": "삼성 디지털 도어락 사용설명서 여러 모델(SHP-DP728·DP738·DP940 등): 약 6개월마다 건전지 점검 권장. 공식 PDF가 아닌 설명서 사본으로만 확인(모델마다 다름)",
+      "sourceUrl": "https://manuals.plus/samsung-sds/shp-dp738-digital-door-lock-manual", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "home_pc_dust", "category": "home", "name": "PC 내부 먼지 청소", "aliases": ["컴퓨터 먼지", "본체 청소"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "일반 사용은 연 2회, 먼지가 많은 곳·반려동물·실내 흡연이면 2~3개월마다 합니다. 전원을 끄고 코드를 뽑은 뒤 압축 공기로 불어냅니다.",
+      "source": "Corsair(PC 부품 제조사) 먼지 청소 안내: 일반 3~6개월, 가끔 쓰는 사용자 연 2회, 먼지 많은 환경 2~3개월",
+      "sourceUrl": "https://www.corsair.com/us/en/explorer/diy-builder/how-tos/how-to-clean-your-pc-and-how-often-you-should-do-it/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_silicone_caulk", "category": "home", "name": "실리콘·코킹 교체", "aliases": ["욕실 실리콘", "실리콘 줄눈"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 5, "max": 8, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "욕실처럼 습한 곳은 짧게 잡습니다. 갈라짐·들뜸·지워지지 않는 곰팡이가 보이면 기간과 상관없이 바로 교체합니다.",
+      "source": "Duravit(위생도기 제조사) 안내: 실리콘 줄눈은 약 5~8년 뒤 교체, 부서지거나 갈라지거나 곰팡이가 슬면 더 일찍 교체",
+      "sourceUrl": "https://www.duravit.com/en-us/inspiration/magazine/knowledge/replacing-silicone-caulk/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_rcd_test", "category": "safety", "name": "누전차단기 시험", "aliases": ["차단기 테스트", "분전함 점검"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "분전함의 누전차단기 시험(TEST) 버튼을 누릅니다. 스위치가 내려오면 정상이고, 내려오지 않거나 다시 올라가지 않으면 전문 업체에 교체를 맡깁니다.",
+      "source": "산업자원부 보도자료(정책브리핑 게재, 2007): 한 달에 1회 정도 정상 동작 시험. 한국전기안전공사 안내(보안뉴스 보도)도 월 1회 확인, 차단 안 되면 교체. 오래된 자료라 최신 안내 확인 권장",
+      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148641734", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_gas_inspection", "category": "safety", "name": "가스 정기 안전점검(공급자 방문)", "aliases": ["도시가스 점검", "LPG 안전점검"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "가스 공급자가 6개월에 1회 이상 가스사용시설을 점검합니다. 방문 일정에 맞춰 점검을 받고 가스 누출 여부와 호스·연결부를 확인합니다.",
+      "source": "한국가스안전공사: 가스공급자는 수요자의 가스사용시설을 6개월에 1회 이상 안전점검해야 함",
+      "sourceUrl": "https://www.kgs.or.kr/kgs/abba/view.do", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_emergency_kit", "category": "safety", "name": "비상용품 유통기한 점검", "aliases": ["비상배낭", "비상식량"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "유통기한이 지난 물품을 바꾸고 가족 상황에 맞게 구성을 고칩니다. 식수·식량·건전지는 반년마다 보는 기준도 있어 범위로 적었습니다.",
+      "source": "미국 Ready.gov: 만료 품목 교체, 매년 필요 재검토·키트 갱신. 반년 점검 기준은 미국 CDC 보관본 안내(검색 요약으로만 확인)",
+      "sourceUrl": "https://www.ready.gov/kit", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_bottle_nipple", "category": "baby", "name": "젖병 젖꼭지", "aliases": ["젖병 니플"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 2, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "사용 전마다 당겨 보고, 갈라짐·늘어짐·끈적임이 있으면 기간과 상관없이 바로 바꿉니다.",
+      "source": "필립스 아벤트: 젖꼭지는 3개월마다, 손상되면 더 일찍 교체. 시코(Chicco): 약 2개월마다",
+      "sourceUrl": "https://www.philips.co.uk/c-m-mo/starter-baby-gift-sets/when-to-change-the-teat-on-your-babys-bottle", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_bottle", "category": "baby", "name": "젖병(플라스틱)", "aliases": ["아기 젖병"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 4, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "플라스틱 젖병 기준입니다. 유리 젖병은 정해진 주기가 없고, 흠집·금·누수가 보이면 어느 쪽이든 바로 바꿉니다.",
+      "source": "시코(Chicco, 제조사) 블로그: 플라스틱 젖병은 4~6개월마다 교체가 안전한 기준",
+      "sourceUrl": "https://www.chiccousa.com/baby-talk/how-often-should-you-replace-your-babys-bottles-nipples/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_pacifier", "category": "baby", "name": "공갈젖꼭지", "aliases": ["쪽쪽이", "노리개 젖꼭지"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "사용 전마다 여러 방향으로 당겨 확인하고, 손상이 있으면 4주 전에라도 바로 바꿉니다.",
+      "source": "필립스 아벤트 고객지원: 안전과 위생을 위해 4주 사용 후 교체 권장, 손상 시 더 일찍 교체",
+      "sourceUrl": "https://www.usa.philips.com/c-f/XC000003054/how-long-can-i-use-a-philips-avent-pacifier", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_car_seat", "category": "baby", "name": "카시트 사용 연한", "aliases": ["유아 카시트", "카시트 교체"],
+      "recommended": { "amount": 6, "unit": "YEAR" }, "range": { "min": 5, "max": 10, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "제조일부터 셉니다(구입일 아님). 정확한 만료일은 카시트 아래쪽이나 본체 라벨에 있으니 확인해서 날짜를 맞춰 고칩니다. 사고를 겪은 카시트는 바로 교체합니다.",
+      "source": "세이프키즈 월드와이드(Safe Kids Worldwide): 보통 6~10년. 시코: 제조사마다 5~10년, 만료일은 제품 라벨에 표시",
+      "sourceUrl": "https://ucsg.safekids.org/faqs/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_reducer_oil", "category": "car", "name": "감속기 오일 점검(전기차)", "aliases": ["감속기유", "리듀서 오일"],
+      "recommended": { "amount": 48, "unit": "MONTH" }, "range": null,
+      "distanceKm": 52000, "notifyDaysBefore": 7,
+      "note": "현대 전기차(아이오닉 5 계열)는 48개월 또는 52,000km마다 감속기 오일을 점검합니다. 가혹 조건에서는 120,000km마다 교환합니다.",
+      "source": "현대자동차 취급설명서 — 정기 점검표(IONIQ 5 NE1N 2026 미국): 감속기 오일 48·96·144개월(32,000·64,000·96,000마일) 칸에 점검(I). 48개월 또는 32,000마일(약 52,000km). 가혹 조건(같은 설명서) 120,000km 교환",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_ev_battery_coolant", "category": "car", "name": "고전압 배터리 냉각수 점검(전기차)", "aliases": ["배터리 냉각 계통"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": 13000, "notifyDaysBefore": 7,
+      "note": "수냉식 고전압 배터리는 12개월 또는 13,000km마다 냉각수 양과 냉각 계통을 점검합니다. 교환은 처음 120개월, 이후 24개월마다입니다. 정비소에 맡깁니다.",
+      "source": "현대자동차 취급설명서 — EV 특별 점검표(IONIQ 5 NE1N 2026 미국): 수랭식 냉각수량·EWP·3방향 밸브를 12개월 또는 8,000마일(13,000km)마다 점검(I)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_ev_hv_battery", "category": "car", "name": "고전압 배터리 점검(전기차)", "aliases": ["구동 배터리 점검", "EV 배터리 진단"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": 13000, "notifyDaysBefore": 7,
+      "note": "고전압 배터리 절연 저항과 전압 편차를 12개월 또는 13,000km마다 점검합니다. 이 점검은 공식 정비소에서 받습니다.",
+      "source": "현대자동차 취급설명서 — EV 특별 점검표(IONIQ 5 NE1N 2026 미국): 고전압 배터리 절연 저항·전압 편차를 12개월 또는 8,000마일(13,000km)마다 점검(I)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_washer_fluid", "category": "car", "name": "워셔액 보충", "aliases": ["워셔액", "와셔액"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "한 달에 한 번 이상 워셔액 양을 확인하고, 부족하면 시판 워셔액으로 채웁니다. 비·눈이 많으면 주유할 때마다 확인합니다.",
+      "source": "혼다 취급설명서 — 워셔액 저장소 수위를 정상 사용 시 최소 월 1회 점검(검색 결과 요약으로만 확인, PDF는 열리지 않음)",
+      "sourceUrl": "https://techinfo.honda.com/rjanisis/pubs/OM/OD0101/OD0101O00255A.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "car_inspection", "category": "car", "name": "자동차 정기검사", "aliases": ["자동차 검사", "정기검사"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "비사업용 승용차는 2년마다 정기검사를 받습니다. 신차의 첫 검사는 등록 후 5년입니다(2024.12 개정 표 기준). 기한을 넘기면 과태료가 있습니다.",
+      "source": "강동구청 자동차 정기검사 안내 — 자동차관리법 시행규칙 별표 15의2(개정 2024.12.17): 비사업용 승용차 유효기간 2년, 신조차 최초 5년",
+      "sourceUrl": "https://www.gangdong.go.kr/web/newportal/contents/gdp_001_003_005", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_dashcam_card", "category": "car", "name": "블랙박스 메모리카드 교체", "aliases": ["블랙박스 SD카드", "마이크로SD"],
+      "recommended": { "amount": 18, "unit": "MONTH" }, "range": { "min": 18, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "블랙박스 카드는 약 18개월~2년마다 교체합니다. 2~3주에 한 번 블랙박스에서 포맷하면 오류를 줄입니다.",
+      "source": "Nextbase(블랙박스 제조사) 고객지원 — SD카드 약 18개월~2년마다 교체, 보통 2~3주마다 포맷",
+      "sourceUrl": "https://support.nextbase.com/en/articles/618510-do-i-need-to-format-my-sd-card", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_wheel_alignment", "category": "car", "name": "휠 얼라인먼트", "aliases": ["휠 정렬", "얼라인먼트"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "6~12개월마다 점검합니다. 연석·포트홀 충격, 타이어 교체, 핸들이 쏠리는 느낌이 있으면 바로 점검합니다.",
+      "source": "파이어스톤 정비 서비스 안내 — 6,000mi 또는 6개월, 최소 연 1회(정비업체 자료, 제조사 값 아님)",
+      "sourceUrl": "https://www.firestonecompleteautocare.com/repair/alignment/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "car_tire_pressure", "category": "car", "name": "타이어 공기압 점검", "aliases": ["공기압", "타이어 압력"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "한 달에 한 번 이상 타이어가 식은 상태에서 예비 타이어까지 점검합니다. 공기압 경고등이 있어도 직접 측정해야 합니다.",
+      "source": "현대자동차 취급설명서 — 타이어와 휠(MEa 2026): 타이어를 최소 월 1회 점검",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/MEa/2026/en_US/topic_mbq_qb2_qcc.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "moto_engine_oil", "category": "motorcycle", "name": "오토바이 엔진오일", "aliases": ["바이크 오일", "엔진 오일 교환"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": 12800, "notifyDaysBefore": 7,
+      "note": "차종마다 다릅니다. 혼다 섀도 750은 12,800km 또는 12개월, 야마하 TW200은 6,000km 또는 6개월입니다. 먼저 오는 쪽에 맞춥니다.",
+      "source": "혼다 VT750 취급설명서 — 정기 교환 8,000mi(12,800km) 또는 12개월; 야마하 TW200 설명서 6,000km 또는 6개월(manualslib 요약)",
+      "sourceUrl": "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/owner_VT750CJ_VT750CSJ/2500_2500/0037.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "moto_chain_care", "category": "motorcycle", "name": "오토바이 체인 청소·윤활", "aliases": ["체인 윤활", "체인 오일"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": 500, "notifyDaysBefore": 7,
+      "note": "혼다 오프로드 모델(CRF450L)은 500km 또는 3개월마다 점검·윤활합니다. 도로용 모델은 보통 800~1,000km마다이며, 비를 맞은 뒤에는 바로 합니다.",
+      "source": "혼다 CRF450L 취급설명서 — 체인 점검·윤활 500km 또는 3개월(표 일부 해석); 야마하·혼다 도로용은 800~1,000km",
+      "sourceUrl": "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/owner_CRF450LK_EN/2500_2500/0042.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "moto_brake_fluid", "category": "motorcycle", "name": "오토바이 브레이크액", "aliases": ["바이크 브레이크 오일"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "2년마다 교환합니다. 마스터 실린더와 캘리퍼 씰도 같은 때 교체합니다.",
+      "source": "야마하 MT-03 취급설명서(유럽) — 브레이크액 2년마다 교환; 혼다 호넷 취급설명서 2년",
+      "sourceUrl": "https://cdn2.yamaha-motor.eu/prod/owner-manuals/Motorcycles/PB6WF8199E0E_1.PDF", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "moto_coolant", "category": "motorcycle", "name": "오토바이 냉각수", "aliases": ["바이크 부동액"],
+      "recommended": { "amount": 36, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "수냉식 오토바이는 3년마다 냉각수를 교환합니다. 공랭식에는 해당하지 않습니다.",
+      "source": "야마하 MT-03 취급설명서(유럽) — 냉각수 3년마다 교환; 혼다 호넷 취급설명서 3년",
+      "sourceUrl": "https://cdn2.yamaha-motor.eu/prod/owner-manuals/Motorcycles/PB6WF8199E0E_1.PDF", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bike_helmet", "category": "bike", "name": "자전거 헬멧", "aliases": ["헬멧", "안전모"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 3, "max": 5, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "충돌했거나 균열·손상이 보이면 기간과 상관없이 바로 교체한다. 제조사마다 3년과 5년으로 다르다.",
+      "source": "Smith: 5년마다 교체 권장. Trek: 손상이 없어도 3년 후 교체 권장. 자전거 헬멧 안전연구소(BHSI): 대부분의 제조사가 5년 권장.",
+      "sourceUrl": "https://www.smithoptics.com/en-us/blogs/blog/when-should-you-replace-your-bike-helmet", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bike_cable_housing", "category": "bike", "name": "자전거 케이블·하우징", "aliases": ["변속 케이블", "브레이크 와이어"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "보통 봄에 교체한다. 레버가 뻑뻑하거나 변속이 굼뜨고 녹이 보이면 더 일찍 바꾼다.",
+      "source": "시마노 정비 안내: 일반 라이더는 1년에 한 번, 가급적 봄에 케이블과 하우징을 교체. (검색 요약으로만 확인, 원문 페이지는 열지 못함)",
+      "sourceUrl": "https://road.shimano.com/us/stories/tune-up-guide-road-cable-housing-and-brake-pads", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bike_brake_fluid", "category": "bike", "name": "유압 브레이크 오일", "aliases": ["디스크 브레이크 에어빼기"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "DOT 오일은 연 1회, 미네랄 오일은 2년에 한 번이 기준이다. 자주 타거나 험한 길을 타면 더 자주 한다.",
+      "source": "SRAM 브레이크 정비 가이드: DOT 오일 브레이크는 최소 1년에 한 번, 미네랄 오일 브레이크는 2년에 한 번 에어빼기.",
+      "sourceUrl": "https://www.sram.com/en/learn/brake-welcome-guide/brake-service-guide", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_litter_change", "category": "pet", "name": "고양이 모래 전체 교체", "aliases": ["모래 갈이", "화장실 모래"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": { "min": 1, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "매일 배설물을 치우면 교체 간격이 길어진다. 뭉치는 모래는 짧게, 고양이가 많으면 더 자주 바꾼다.",
+      "source": "퓨리나 UK: 뭉치는 모래는 한 마리 기준 주 1회 전체 교체. 닥터 엘지(Dr. Elsey's): 사용량에 따라 3~4주마다 전체 교체.",
+      "sourceUrl": "https://purina.co.uk/articles/cats/kitten/behaviour/how-often-to-change-cat-litter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_litter_box", "category": "pet", "name": "고양이 화장실 본체", "aliases": ["캣 토일렛"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "플라스틱은 긁힌 자국에 냄새와 세균이 남는다. 긁힘·균열·얼룩이 보이면 더 일찍 바꾼다.",
+      "source": "펫코(Petco) 전문가 안내: 일반 플라스틱 화장실은 약 1년마다 교체. 닥터 엘지 진료소 안내: 6~12개월. (검색 요약으로만 확인, 원문 미확인)",
+      "sourceUrl": "https://www.petco.com/content/content-hub/home/articlePages/01/how-to-change-whole-litter-box.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "pet_litter_filter", "category": "pet", "name": "고양이 화장실 탈취 필터", "aliases": ["화장실 카본 필터"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "고양이가 많이 쓰거나 향이 있는 모래를 쓰면 더 자주 바꾼다. 모델에 맞는 필터를 쓴다.",
+      "source": "리터로봇(Litter-Robot) FAQ: 최적의 냄새 흡수를 위해 탄소 필터를 매달 교체 권장. 사용량에 따라 달라짐. 다른 브랜드 화장실(Catit 등)의 공식 주기는 찾지 못함.",
+      "sourceUrl": "https://www.litter-robot.com/litter-robot-4-carbon-filters-2pk.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_aquarium_filter_media", "category": "pet", "name": "어항 여과재", "aliases": ["어항 필터 카트리지", "여과 카트리지"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "물 흐름이 눈에 띄게 줄면 4주 전이라도 바꾼다. 여과재를 한꺼번에 전부 바꾸면 유익한 박테리아가 사라진다.",
+      "source": "테트라(Tetra) 수족관 안내: 필터 카트리지는 최소 4주마다, 또는 물 흐름이 눈에 띄게 줄면 교체.",
+      "sourceUrl": "https://www.tetra-fish.com/learning-center/getting-started/aquarium-dos-and-donts.aspx", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_aquarium_water_change", "category": "pet", "name": "어항 부분 물갈이", "aliases": ["어항 물갈이"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "한 번에 전체 물의 약 25%를 갈고, 염소 제거제를 쓴 같은 온도의 물을 넣는다.",
+      "source": "테트라: 2주마다 물의 25% 교체. API: 2주마다 부분 물갈이(25%) 권장.",
+      "sourceUrl": "https://www.tetra-fish.com/learning-center/getting-started/aquarium-dos-and-donts.aspx", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_bed", "category": "pet", "name": "반려동물 방석·침대", "aliases": ["강아지 침대"],
+      "recommended": { "amount": 2, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "속이 꺼져 납작하거나 찢어졌거나 동물이 쓰지 않으면 더 일찍 바꾼다. 싼 제품은 더 빨리 낡는다.",
+      "source": "펫코와 반려동물 용품점 안내: 보통 1~3년. 공식 기관 자료는 찾지 못해 판매처 기사로만 확인.",
+      "sourceUrl": "https://esg.petco.com/content/content-hub/home/articlePages/home-habitat/replacing-your-dogs-bed.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "pet_bowl_wash", "category": "pet", "name": "반려동물 밥그릇·물그릇", "aliases": ["밥그릇 세척"],
+      "recommended": { "amount": 1, "unit": "DAY" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 0,
+      "note": "비누와 뜨거운 물로 씻는다. 금이 가거나 흠집이 난 그릇은 세균이 남으므로 바꾼다.",
+      "source": "미국 FDA: 사료 그릇과 계량 도구는 사용할 때마다 비누와 뜨거운 물로 세척. 하루 한 번 이상 씻는 것으로 잡음.",
+      "sourceUrl": "https://www.fda.gov/animalveterinary/resourcesforyou/animalhealthliteracy/ucm369141.htm", "checked": "2026-11-16", "verified": true
     }
   ]
 }

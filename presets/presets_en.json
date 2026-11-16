@@ -1,7 +1,7 @@
 {
   "format": "swapday-presets",
-  "version": 2,
-  "updated": "2026-10-13",
+  "version": 3,
+  "updated": "2026-11-16",
   "language": "en",
   "categories": [
     { "id": "water_purifier", "name": "Water purifier", "emoji": "💧" },
@@ -10,11 +10,17 @@
     { "id": "car", "name": "Car", "emoji": "🚗" },
     { "id": "home", "name": "Home", "emoji": "🏠" },
     { "id": "safety", "name": "Safety", "emoji": "🔥" },
-    { "id": "pet", "name": "Pets", "emoji": "🐶" }
+    { "id": "pet", "name": "Pets", "emoji": "🐶" },
+    { "id": "appliance", "name": "Appliances", "emoji": "🧺" },
+    { "id": "kitchen", "name": "Kitchen", "emoji": "🍳" },
+    { "id": "bathroom", "name": "Bathroom", "emoji": "🛁" },
+    { "id": "motorcycle", "name": "Motorcycle", "emoji": "🏍️" },
+    { "id": "bike", "name": "Bicycle", "emoji": "🚲" },
+    { "id": "baby", "name": "Baby", "emoji": "🍼" }
   ],
   "parts": [
     {
-      "id": "wp_sediment", "category": "water_purifier", "name": "Sediment filter", "aliases": ["Stage 1 filter", "Pre-filter"],
+      "id": "wp_sediment", "category": "water_purifier", "name": "Sediment filter", "aliases": ["Stage 1 filter", "Water pre-filter"],
       "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
       "distanceKm": null, "notifyDaysBefore": 7,
       "note": "Varies by maker and model. Use a shorter cycle with poor water quality or heavy use.",
@@ -78,7 +84,7 @@
       "sourceUrl": "https://www.lge.co.kr/support/solutions-20153405050483", "checked": "2026-10-13", "verified": true
     },
     {
-      "id": "ac_filter", "category": "air_conditioner", "name": "AC filter cleaning", "aliases": ["Air conditioner filter", "Dust filter"],
+      "id": "ac_filter", "category": "air_conditioner", "name": "AC filter cleaning", "aliases": ["Air conditioner filter", "AC dust filter"],
       "recommended": { "amount": 2, "unit": "WEEK" }, "range": null,
       "distanceKm": null, "notifyDaysBefore": 2,
       "note": "During the cooling season. Also clean it before and after summer.",
@@ -348,6 +354,566 @@
       "note": "For dry chemical extinguishers in Korea, counted from the manufacture date. Rules differ by country; follow the label and local rules.",
       "source": "Korea Fire Institute (KFI): dry chemical extinguishers past 10 years from manufacture must be replaced or performance-checked",
       "sourceUrl": "https://www.kfsi.or.kr/contents/webzine/201703/sub02-01.html", "checked": "2026-10-13", "verified": true
+    },
+    {
+      "id": "ac_outdoor_clean", "category": "air_conditioner", "name": "AC outdoor unit cleaning", "aliases": ["Condenser"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Clear the area around the unit and remove dust from the coil before summer. Turn the power off first.",
+      "source": "Carrier says to deep clean the indoor coils and the outdoor condenser at least once a year",
+      "sourceUrl": "https://www.carrier.com/us/en/residential/hvac-resources/air-conditioners/how-to-clean-an-ac-unit.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "ac_deep_clean", "category": "air_conditioner", "name": "AC deep cleaning", "aliases": ["Coil cleaning"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "The coils and fan need professional tools. Book earlier if you smell odor or cooling is weak.",
+      "source": "Carrier says to deep clean the indoor coils and the outdoor condenser at least once a year. LG offers a disassembly cleaning service but gives no interval",
+      "sourceUrl": "https://www.carrier.com/us/en/residential/hvac-resources/air-conditioners/how-to-clean-an-ac-unit.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "wp_self_sanitize", "category": "water_purifier", "name": "Water purifier sanitizing", "aliases": ["Spout sanitizing"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "On hot and cold models, run the hot water sanitizing cycle for the spout. Discard the hot water.",
+      "source": "LG Electronics support: sanitize the spout every 3 months (PuriCare dual purifier). The water pipe self-sanitizes weekly",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20152764443954", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "ap_sensor_clean", "category": "air_purifier", "name": "Air purifier sensor cleaning", "aliases": ["Dust sensor"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Unplug the unit and open the sensor cover. Wipe the lens with a damp cotton swab, then dry it with a dry swab.",
+      "source": "LG Electronics support: clean the PM1.0 sensor once every two months",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150615143585", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_filter", "category": "appliance", "name": "Robot vacuum filter", "aliases": ["Dust bin filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Tap the filter often and keep it dry. The interval varies by model; replace it when it shows wear.",
+      "source": "iRobot support: replace the filter every 3-6 months (Roomba 100/1000). Roborock manual: washable filter every 6-12 months",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_side_brush", "category": "appliance", "name": "Robot vacuum side brush", "aliases": ["Edge brush"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Remove tangled hair monthly. Replace the brush when the bristles bend or wear.",
+      "source": "iRobot support (edge sweeping brush) 3-6 months; Roborock manual 3-6 months",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_main_brush", "category": "appliance", "name": "Robot vacuum main brush", "aliases": ["Roller brush"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Cut away wrapped hair. Replace sooner if the brush is noisy or worn.",
+      "source": "iRobot support 6-12 months; Roborock manual 6-12 months",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_robot_mop_pad", "category": "appliance", "name": "Robot vacuum mop pad", "aliases": ["Mop cloth"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 1, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Wash and dry it after use. Replace it when it smells or the fibers wear out.",
+      "source": "iRobot support 3-6 months (Roomba 100/1000); Roborock manual 1-3 months",
+      "sourceUrl": "https://homesupport.irobot.com/articles/en_US/Knowledge/10504", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_vacuum_bag", "category": "appliance", "name": "Vacuum cleaner dust bag", "aliases": ["Dust bag"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Replace the bag at once when the full light turns on. Replace it if it smells, even earlier.",
+      "source": "LG Electronics support: replace the dust bag of the LG Compact Tower dust-emptying dock within 1-2 months",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20155192159949", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_dehumid_dustnet", "category": "appliance", "name": "Dehumidifier dust filter cleaning", "aliases": ["Dehumidifier filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Remove dust with a vacuum or soft brush. If very dirty, wash with mild soap and water under 40 C.",
+      "source": "LG Electronics support: clean the micro filter (dust net) once a month",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-20150464095311", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_washer_gasket", "category": "appliance", "name": "Washing machine gasket cleaning", "aliases": ["Door seal"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Wipe with warm water and oxygen bleach, then leave the door open to dry. Do not use chlorine bleach.",
+      "source": "LG Electronics support: clean the rubber gasket monthly with oxygen bleach",
+      "sourceUrl": "https://www.lge.co.kr/support/solutions-1436232784400", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_washer_drain_filter", "category": "appliance", "name": "Washing machine drain filter cleaning", "aliases": ["Pump filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": { "min": 1, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Drain the tub, turn the filter out and rinse off debris. Check first that no hot water is left.",
+      "source": "Samsung (US): clean the pump filter at least monthly or about every 40 washes. Samsung (Canada): every 1-3 months. LG says only to clean it regularly",
+      "sourceUrl": "https://www.samsung.com/us/support/answer/ANS10003197/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "appl_dryer_duct", "category": "appliance", "name": "Dryer exhaust duct cleaning", "aliases": ["Dryer vent"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Clean more often if you dry often or drying takes longer. A professional gives a safer, deeper clean.",
+      "source": "Samsung (Canada): inspect the exhaust vent at least once a year, more often with frequent use",
+      "sourceUrl": "https://www.samsung.com/ca/support/home-appliances/how-to-clean-your-samsung-dryer/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_dishwasher_filter", "category": "kitchen", "name": "Dishwasher filter cleaning", "aliases": ["Dishwasher filter"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": { "min": 2, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Clean it sooner after heavy food soil, odors, or slow draining.",
+      "source": "Bosch UK support: clean the filter at least every 2 weeks. Samsung support (Levant page): clean every 2-4 weeks.",
+      "sourceUrl": "https://www.bosch-home.co.uk/en/c/spotlight/bltdb88363c39b11bb1/customer-service/dishwasher-hub/clean-dishwasher", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_dishwasher_tub", "category": "kitchen", "name": "Dishwasher self-clean cycle", "aliases": ["Dishwasher tub cleaning"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Run the cleaning programme with the machine empty. If your model has none, follow its manual.",
+      "source": "Bosch UK support: run a cleaning programme at least every 2 months.",
+      "sourceUrl": "https://www.bosch-home.co.uk/en/c/spotlight/bltdb88363c39b11bb1/customer-service/dishwasher-hub/clean-dishwasher", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_fridge_coil", "category": "kitchen", "name": "Refrigerator condenser coil cleaning", "aliases": ["Fridge coils"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Unplug the fridge and remove dust with a vacuum or brush. Do it more often with pets.",
+      "source": "Samsung service Korea: clean the machine compartment about once a year (seen in search summary, page not opened). Bosch UK support: clean the coils every 6-12 months.",
+      "sourceUrl": "https://www.bosch-home.co.uk/customer-service/get-support/cooling-and-freezing/cleaning-fridge-coils", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_kettle_descale", "category": "kitchen", "name": "Electric kettle descaling", "aliases": ["Kettle limescale"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Descale more often with hard water or heavy use. Follow the maker's method.",
+      "source": "Several household guides say about once a month (seen in search summaries only; no maker figure found).",
+      "sourceUrl": "https://www.bobvila.com/articles/how-to-descale-a-kettle/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_coffee_descale", "category": "kitchen", "name": "Coffee machine descaling", "aliases": ["Nespresso descale"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Use a shorter cycle with hard water or heavy use. Follow the machine's alert if it has one.",
+      "source": "Nespresso Korea FAQ: every 6 months at about 40 cups per week. Nespresso US FAQ: every 3 months or 300 capsules, whichever is first.",
+      "sourceUrl": "https://www.contact.nespresso.com/faq/kr/en/detail/11078", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_coffee_filter", "category": "kitchen", "name": "Coffee machine water filter", "aliases": ["Machine water filter"],
+      "recommended": { "amount": 2, "unit": "MONTH" }, "range": { "min": 1, "max": 2, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Use a shorter cycle with hard water or heavy use. Brita cartridges use a 4-week limit.",
+      "source": "De'Longhi FAQ: filter lasts 2 months under normal conditions. Brita UK FAQ: replace a MAXTRA PRO cartridge at least every 4 weeks.",
+      "sourceUrl": "https://www.delonghi.com/en-us/faqs/De%27Longhi-Fully-Automatic-Coffee-Machine-Accessories---Water-Filter/a/83346", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "kitchen_cooker_gasket", "category": "kitchen", "name": "Rice cooker rubber gasket", "aliases": ["Cooker packing"],
+      "recommended": { "amount": 2, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace it right away if steam leaks or the lid feels stiff. Packings are model-specific.",
+      "source": "CUCKOO America help center: every 2-3 years (seen in search summary, page not opened). One Cuckoo model manual: 12 months (retailer listing summary).",
+      "sourceUrl": "https://cuckooamerica.com/apps/help-center", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_foodwaste_filter", "category": "kitchen", "name": "Food waste dryer filter", "aliases": ["Odor filter"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Cycle varies by model. Replace sooner if odor returns.",
+      "source": "Smart Kara product page: carbon filter up to 6 months (search summary). Comparison blog: 3-4 months. No per-model official document opened.",
+      "sourceUrl": "https://gola4u.com/best-food-waste-disposer/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_nonstick_pan", "category": "kitchen", "name": "Nonstick frying pan", "aliases": ["Nonstick pan"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 5, "max": 7, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace it at once if the coating peels or is deeply scratched.",
+      "source": "Cookware and Bakeware Alliance spokesperson (via America's Test Kitchen): 5-7 years for a quality coating.",
+      "sourceUrl": "https://www.americastestkitchen.com/articles/5117-how-often-should-i-replace-my-nonstick-pan", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "kitchen_dishcloth", "category": "kitchen", "name": "Dishcloth and kitchen towel", "aliases": ["Dish rag"],
+      "recommended": { "amount": 1, "unit": "DAY" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 0,
+      "note": "Swap it right away after wiping raw meat juice. Wash on a hot machine cycle.",
+      "source": "University of Minnesota Extension: replace dishcloths daily (search summary; page blocked). USDA FSIS: wash dishcloths often on the hot cycle.",
+      "sourceUrl": "https://extension.umn.edu/sanitation-and-preventing-illness/clean-kitchen-required-food-safety", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_bidet_nozzle", "category": "bathroom", "name": "Bidet nozzle tip", "aliases": ["Bidet nozzle"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 2, "max": 4, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Varies by model. Check your maker's guidance.",
+      "source": "Coway rental retailer page: nozzle tip 2 or 4 months. No official manual found.",
+      "sourceUrl": "https://rentre.kr/product/1600007917/%EC%8A%A4%ED%83%80%EC%9D%BC-%EB%B9%84%EB%8D%B0", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_bidet_filter", "category": "bathroom", "name": "Bidet water filter", "aliases": ["Bidet filter"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 4, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Choose the genuine filter for your model number.",
+      "source": "Coway rental retailer page: pre-micro filter 4 months. Comparison blog: 4-6 months. No official manual found.",
+      "sourceUrl": "https://rentre.kr/product/1600007917/%EC%8A%A4%ED%83%80%EC%9D%BC-%EB%B9%84%EB%8D%B0", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_towel", "category": "bathroom", "name": "Bath towel", "aliases": ["Towel wash"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Wash two to three times a week in humid homes or summer.",
+      "source": "Cleveland Clinic: launder or swap bath towels at least once a week.",
+      "sourceUrl": "https://health.clevelandclinic.org/how-often-should-you-wash-your-germ-magnet-of-a-bath-towel", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_scrubber", "category": "bathroom", "name": "Shower pouf and loofah", "aliases": ["Loofah"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": { "min": 3, "max": 8, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Natural loofah 3-4 weeks, plastic pouf up to 2 months. Discard at once if mold or musty smell appears.",
+      "source": "Cleveland Clinic: natural loofah 3-4 weeks, plastic 2 months.",
+      "sourceUrl": "https://health.clevelandclinic.org/loofahs-can-double-as-bacterial-breeding-grounds", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_shower_curtain", "category": "bathroom", "name": "Shower curtain liner", "aliases": ["Shower liner"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "You can also machine-rinse it with vinegar or bleach instead of replacing.",
+      "source": "Cleveland Clinic dermatologist: replace the shower liner every 6 months to a year.",
+      "sourceUrl": "https://health.clevelandclinic.org/can-your-dirty-shower-curtain-make-you-sick", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_mat", "category": "bathroom", "name": "Bath mat", "aliases": ["Bathroom rug"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": { "min": 1, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Check the care label before washing. Dry it fully.",
+      "source": "Bathroom cleaning guides (Angi etc.): at least weekly; another says monthly (search summaries). No agency source found.",
+      "sourceUrl": "https://angi.com/articles/how-often-should-you-clean-your-bathroom.htm", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_vent_fan", "category": "bathroom", "name": "Bathroom exhaust fan cleaning", "aliases": ["Vent fan"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Turn off power and wipe dust off the grille.",
+      "source": "Korean lifestyle article (WikiTree): wipe the grille about once a month (search summary). No official source.",
+      "sourceUrl": "https://www.wikitree.co.kr/articles/1159686", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_razor_blade", "category": "bathroom", "name": "Razor blade cartridge", "aliases": ["Razor cartridge"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "About 20 shaves for 5-blade, 15 for 3-blade. Replace sooner if it tugs or irritates.",
+      "source": "Gillette US: every 5-10 shaves; daily shavers about weekly; Fusion5/ProGlide about 20 shaves.",
+      "sourceUrl": "https://gillette.com/en-us/shaving-tips/how-to-shave/how-often-should-you-change-your-razor", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_hairbrush", "category": "bathroom", "name": "Hairbrush", "aliases": ["Hair brush"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace at once if bristles bend, fall out, or the base cracks. Remove hair every 1-2 weeks.",
+      "source": "Dermatologist quoted in articles: replace every 6 months; general guides 6-12 months (search summaries).",
+      "sourceUrl": "https://ca.finance.yahoo.com/news/often-replace-hairbrush-hint-probably-214906618.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_makeup_sponge", "category": "bathroom", "name": "Makeup sponge", "aliases": ["Beauty sponge"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 1, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "AAD says clean after every use. Replace at once if it tears or smells.",
+      "source": "American Academy of Dermatology: clean sponges after every use (no replacement interval). 1-3 months replacement comes from beauty media summaries.",
+      "sourceUrl": "https://www.aad.org/public/everyday-care/skin-care-secrets/prevent-skin-problems/replace-makeup-sunscreen", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bath_makeup_brush", "category": "bathroom", "name": "Makeup brush cleaning", "aliases": ["Cosmetic brush"],
+      "recommended": { "amount": 7, "unit": "DAY" }, "range": { "min": 7, "max": 10, "unit": "DAY" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Rinse only the tips with mild shampoo and dry flat.",
+      "source": "American Academy of Dermatology: wash makeup brushes every 7 to 10 days.",
+      "sourceUrl": "https://www.aad.org/public/everyday-care/skin-care-secrets/routine/clean-your-makeup-brushes", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bath_mascara", "category": "bathroom", "name": "Mascara", "aliases": ["Mascara tube"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 2, "max": 4, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Discard at once if it dries out. Throw away the product used during an eye infection.",
+      "source": "AAD: mascara lasts three months. US FDA: manufacturers usually recommend discarding it 2-4 months after purchase.",
+      "sourceUrl": "https://www.fda.gov/cosmetics/cosmetic-products/eye-cosmetic-safety", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_comforter_wash", "category": "home", "name": "Comforter and blanket washing", "aliases": ["Wash duvet"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "With a duvet cover or top sheet, wash the comforter once or twice a year. Wash it every 3 to 6 months without a cover, or with allergies, pets or heavy sweating. Wash the cover every 1 to 2 weeks.",
+      "source": "Sleep Foundation: once or twice a year with a cover or top sheet; every 3 to 6 months without a cover, or with allergies, pets or heavy sweating; cover every 1 to 2 weeks. The page covers comforters; no blanket-specific figure was found.",
+      "sourceUrl": "https://www.sleepfoundation.org/bedding-information/how-to-wash-a-down-comforter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_duvet_replace", "category": "home", "name": "Comforter replacement", "aliases": ["Duvet insert"],
+      "recommended": { "amount": 10, "unit": "YEAR" }, "range": { "min": 10, "max": 15, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "This figure is for down comforters. Synthetic fill loses loft faster. Replace sooner if it clumps, smells or no longer keeps you warm.",
+      "source": "Sleep Foundation: down comforters can last 10 to 15 years or longer with proper care",
+      "sourceUrl": "https://www.sleepfoundation.org/best-bedding/best-down-comforter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_cleaning_cloth", "category": "home", "name": "Microfiber cleaning cloth", "aliases": ["Microfiber cloth"],
+      "recommended": { "amount": 1, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "These are the maker's guarantee periods, so a cloth used daily may wear out sooner. Rinse and wring it, wash it weekly, and avoid bleach and fabric softener.",
+      "source": "E-Cloth care page: General Purpose Cloth has a 3-year or 300-wash guarantee. Some product pages by the same company say 1 year or 100 washes, so the range covers both.",
+      "sourceUrl": "https://www.e-cloth.com/pages/care", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_doorlock_battery", "category": "home", "name": "Door lock batteries", "aliases": ["Smart lock battery"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Check the batteries for leaks every 6 months. When the low-battery alert sounds, replace all batteries at once. Battery life is about 10 to 12 months at 10 uses a day.",
+      "source": "Samsung digital door lock manuals (SHP-DP728, DP738, DP940 and others): check batteries about every 6 months. Seen only in manual copies, not on an official Samsung page; it varies by model.",
+      "sourceUrl": "https://manuals.plus/samsung-sds/shp-dp738-digital-door-lock-manual", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "home_pc_dust", "category": "home", "name": "PC dust cleaning", "aliases": ["Clean computer case"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": { "min": 3, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Casual use needs a cleaning twice a year. In dusty rooms, or with pets or indoor smoking, clean every 2 to 3 months. Power off and unplug first, then blow out the dust with compressed air.",
+      "source": "Corsair (PC parts maker) dust guide: every 3 to 6 months in general, twice a year for casual users, every 2 to 3 months in dusty places",
+      "sourceUrl": "https://www.corsair.com/us/en/explorer/diy-builder/how-tos/how-to-clean-your-pc-and-how-often-you-should-do-it/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "home_silicone_caulk", "category": "home", "name": "Silicone caulk replacement", "aliases": ["Bathroom sealant"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 5, "max": 8, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Use the short end in damp places such as bathrooms. Replace it at once if it cracks, peels or grows mold that will not clean off.",
+      "source": "Duravit (sanitary ware maker): replace silicone joints after about 5 to 8 years, sooner if brittle, cracked or moldy",
+      "sourceUrl": "https://www.duravit.com/en-us/inspiration/magazine/knowledge/replacing-silicone-caulk/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_rcd_test", "category": "safety", "name": "Earth leakage breaker test", "aliases": ["RCD test"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Press the TEST button on the breaker in the distribution box. If the switch trips, it works. If it does not trip or will not reset, have a professional replace it.",
+      "source": "Korean Ministry of Commerce, Industry and Energy press release (2007, via korea.kr): test about once a month. A Korea Electrical Safety Corporation tip (via Boannews) also says monthly, and replace the breaker if it does not trip.",
+      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148641734", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_gas_inspection", "category": "safety", "name": "Gas safety inspection visit", "aliases": ["Gas safety check"],
+      "recommended": { "amount": 6, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "The gas supplier must inspect your gas-use facilities at least once every 6 months. Allow the visit and ask them to check for leaks, hoses and joints.",
+      "source": "Korea Gas Safety Corporation: gas suppliers must inspect customers' gas-use facilities at least once every 6 months",
+      "sourceUrl": "https://www.kgs.or.kr/kgs/abba/view.do", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "safety_emergency_kit", "category": "safety", "name": "Emergency kit check", "aliases": ["Go bag"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace expired items and update the kit for your family's needs. Some guidance checks water, food and batteries every 6 months, so the range covers that.",
+      "source": "Ready.gov: replace expired items and rethink your needs every year. The 6-month check comes from archived CDC guidance, seen only in a search summary.",
+      "sourceUrl": "https://www.ready.gov/kit", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_bottle_nipple", "category": "baby", "name": "Baby bottle teat", "aliases": ["Bottle nipple"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": { "min": 2, "max": 3, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Pull the teat in all directions before each use. Replace it at once if it is cracked, stretched or sticky, whatever its age.",
+      "source": "Philips Avent: replace teats every 3 months, sooner if damaged. Chicco: roughly every 2 months.",
+      "sourceUrl": "https://www.philips.co.uk/c-m-mo/starter-baby-gift-sets/when-to-change-the-teat-on-your-babys-bottle", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_bottle", "category": "baby", "name": "Plastic baby bottle", "aliases": ["Feeding bottle"],
+      "recommended": { "amount": 4, "unit": "MONTH" }, "range": { "min": 4, "max": 6, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "This is for plastic bottles. Glass bottles have no set interval. Replace either type at once if it shows scratches, cracks or leaks.",
+      "source": "Chicco (maker) blog: replace plastic bottles every 4 to 6 months as a safe rule of thumb",
+      "sourceUrl": "https://www.chiccousa.com/baby-talk/how-often-should-you-replace-your-babys-bottles-nipples/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_pacifier", "category": "baby", "name": "Pacifier", "aliases": ["Soother", "Dummy"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Pull it in all directions before each use. If it is damaged in any way, replace it before the 4 weeks are up.",
+      "source": "Philips Avent support: replace the pacifier after 4 weeks of use for safety and hygiene, and sooner if damaged",
+      "sourceUrl": "https://www.usa.philips.com/c-f/XC000003054/how-long-can-i-use-a-philips-avent-pacifier", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "baby_car_seat", "category": "baby", "name": "Car seat expiry", "aliases": ["Child seat expiration"],
+      "recommended": { "amount": 6, "unit": "YEAR" }, "range": { "min": 5, "max": 10, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Count from the manufacture date, not the purchase date. Find the exact expiry date on the label under the seat or on its shell and adjust this reminder to it. Replace a seat after a crash.",
+      "source": "Safe Kids Worldwide: usually 6 to 10 years. Chicco: many range from 5 to 10 years, and the date is on the seat label.",
+      "sourceUrl": "https://ucsg.safekids.org/faqs/", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_reducer_oil", "category": "car", "name": "Reduction gear oil check (EV)", "aliases": ["Reducer fluid"],
+      "recommended": { "amount": 48, "unit": "MONTH" }, "range": null,
+      "distanceKm": 52000, "notifyDaysBefore": 7,
+      "note": "Hyundai lists a reducer fluid inspection every 48 months or 52,000 km on the IONIQ 5 family. Under severe use the fluid is replaced every 120,000 km.",
+      "source": "Hyundai owner's manual, normal maintenance schedule (IONIQ 5 NE1N 2026 US): reducer fluid marked I at 48/96/144 months (32,000/64,000/96,000 mi), i.e. every 48 months or 32,000 mi (about 52,000 km); severe-use page: replace every 80,000 mi (120,000 km)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_ev_battery_coolant", "category": "car", "name": "High-voltage battery coolant check (EV)", "aliases": ["EV battery coolant level"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": 13000, "notifyDaysBefore": 7,
+      "note": "A water-cooled high-voltage battery needs a coolant amount and cooling system check every 12 months or 13,000 km. Coolant is replaced at 120 months, then every 24 months. Use a dealer.",
+      "source": "Hyundai owner's manual, EV special care schedule (IONIQ 5 NE1N 2026 US): water-cooled coolant amount, EWP and 3-way valve marked I every 12 months or 8,000 mi (13,000 km)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_ev_hv_battery", "category": "car", "name": "High-voltage battery inspection (EV)", "aliases": ["EV battery check"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": 13000, "notifyDaysBefore": 7,
+      "note": "Check the high-voltage battery insulation resistance and voltage deviation every 12 months or 13,000 km. An authorized service center does this check.",
+      "source": "Hyundai owner's manual, EV special care schedule (IONIQ 5 NE1N 2026 US): high-voltage battery insulation resistance and voltage deviation marked I every 12 months or 8,000 mi (13,000 km)",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/NE1N/2026/en_US/idc415036e46f.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_washer_fluid", "category": "car", "name": "Washer fluid top-up", "aliases": ["Wiper fluid"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Check the washer fluid level at least once a month and top up with commercial washer fluid. In bad weather, check at every fuel stop.",
+      "source": "Honda owner's manual: check the windshield washer reservoir at least monthly in normal use (seen only in a search summary; the PDF did not open)",
+      "sourceUrl": "https://techinfo.honda.com/rjanisis/pubs/OM/OD0101/OD0101O00255A.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "car_inspection", "category": "car", "name": "Periodic vehicle inspection", "aliases": ["Car inspection", "Roadworthiness test"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "A private passenger car needs an inspection every 2 years. A new car's first inspection is due 5 years after registration (table revised 2024-12). Late inspection carries a fine.",
+      "source": "Gangdong-gu Office guide quoting the Enforcement Rule of the Motor Vehicle Management Act, Annex 15-2 (rev. 2024-12-17): private passenger car validity 2 years, first inspection of a new car 5 years",
+      "sourceUrl": "https://www.gangdong.go.kr/web/newportal/contents/gdp_001_003_005", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_dashcam_card", "category": "car", "name": "Dash cam memory card replacement", "aliases": ["Dashcam SD card"],
+      "recommended": { "amount": 18, "unit": "MONTH" }, "range": { "min": 18, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace a dash cam card about every 18 months to 2 years. Format it in the camera every 2-3 weeks to cut errors.",
+      "source": "Nextbase (dash cam maker) support: replace the SD card about every 18 months to 2 years; format every 2-3 weeks for most users",
+      "sourceUrl": "https://support.nextbase.com/en/articles/618510-do-i-need-to-format-my-sd-card", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "car_wheel_alignment", "category": "car", "name": "Wheel alignment check", "aliases": ["Alignment"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Check every 6 to 12 months. Check right away after a curb or pothole hit, new tires, or if the car pulls to one side.",
+      "source": "Firestone service pages: every 6,000 mi or six months, at least once a year (service provider advice, not a vehicle maker figure)",
+      "sourceUrl": "https://www.firestonecompleteautocare.com/repair/alignment/", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "car_tire_pressure", "category": "car", "name": "Tire pressure check", "aliases": ["Tyre pressure"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Check all tires, including the spare, at least once a month when they are cold. A pressure warning light does not replace a gauge check.",
+      "source": "Hyundai owner's manual, Tires and wheels (MEa 2026): check your tires at least once a month",
+      "sourceUrl": "https://ownersmanual.hyundai.com/full_webhelp/MEa/2026/en_US/topic_mbq_qb2_qcc.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "moto_engine_oil", "category": "motorcycle", "name": "Motorcycle engine oil", "aliases": ["Motorcycle oil change"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": 12800, "notifyDaysBefore": 7,
+      "note": "It depends on the model. The Honda Shadow 750 says 12,800 km or 12 months and the Yamaha TW200 says 6,000 km or 6 months. Follow whichever comes first.",
+      "source": "Honda VT750 owner's manual: every 8,000 mi (12,800 km) or 12 months; Yamaha TW200 manual: 6,000 km or 6 months (manualslib summary)",
+      "sourceUrl": "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/owner_VT750CJ_VT750CSJ/2500_2500/0037.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "moto_chain_care", "category": "motorcycle", "name": "Motorcycle chain clean and lube", "aliases": ["Chain lube"],
+      "recommended": { "amount": 3, "unit": "MONTH" }, "range": null,
+      "distanceKm": 500, "notifyDaysBefore": 7,
+      "note": "The Honda off-road CRF450L says inspect and lubricate every 500 km or 3 months. Road models usually say every 800-1,000 km, and after rain.",
+      "source": "Honda CRF450L owner's manual: chain inspect and lubricate every 500 km or 3 months (table partly decoded); Yamaha and Honda road models 800-1,000 km",
+      "sourceUrl": "https://www.bike-parts.fr/thumbs/pdf_url/img/owner_manuals/owner_CRF450LK_EN/2500_2500/0042.pdf", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "moto_brake_fluid", "category": "motorcycle", "name": "Motorcycle brake fluid", "aliases": ["Moto brake fluid"],
+      "recommended": { "amount": 24, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace every 2 years. Replace the master cylinder and caliper seals at the same time.",
+      "source": "Yamaha MT-03 owner's manual (Europe): change brake fluid every 2 years; Honda Hornet owner's manual: 2 years",
+      "sourceUrl": "https://cdn2.yamaha-motor.eu/prod/owner-manuals/Motorcycles/PB6WF8199E0E_1.PDF", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "moto_coolant", "category": "motorcycle", "name": "Motorcycle coolant", "aliases": ["Moto coolant"],
+      "recommended": { "amount": 36, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Change the coolant every 3 years on a liquid-cooled motorcycle. This does not apply to air-cooled models.",
+      "source": "Yamaha MT-03 owner's manual (Europe): change coolant every 3 years; Honda Hornet owner's manual: 3 years",
+      "sourceUrl": "https://cdn2.yamaha-motor.eu/prod/owner-manuals/Motorcycles/PB6WF8199E0E_1.PDF", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bike_helmet", "category": "bike", "name": "Bicycle helmet", "aliases": ["Bike helmet", "Cycling helmet"],
+      "recommended": { "amount": 5, "unit": "YEAR" }, "range": { "min": 3, "max": 5, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace at once after a crash or if you see cracks or damage. Makers differ: 3 years or 5 years.",
+      "source": "Smith: replace every 5 years. Trek: replace after 3 years even if undamaged. Bicycle Helmet Safety Institute: most makers now say 5 years.",
+      "sourceUrl": "https://www.smithoptics.com/en-us/blogs/blog/when-should-you-replace-your-bike-helmet", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "bike_cable_housing", "category": "bike", "name": "Bicycle cables and housing", "aliases": ["Shift cable", "Brake cable"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Usually done in spring. Replace sooner if the lever feels stiff, shifting is slow, or you see rust.",
+      "source": "Shimano tune-up guide: the average rider should replace cables and housing once a year, preferably in spring. (Seen in search summary only; the page itself could not be opened.)",
+      "sourceUrl": "https://road.shimano.com/us/stories/tune-up-guide-road-cable-housing-and-brake-pads", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "bike_brake_fluid", "category": "bike", "name": "Hydraulic brake fluid", "aliases": ["Brake bleed", "Disc brake bleed"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 12, "max": 24, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Yearly for DOT fluid, every two years for mineral oil. Do it more often with frequent or aggressive riding.",
+      "source": "SRAM brake service guide: bleed DOT fluid brakes at least once a year; mineral oil brakes only every two years.",
+      "sourceUrl": "https://www.sram.com/en/learn/brake-welcome-guide/brake-service-guide", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_litter_change", "category": "pet", "name": "Cat litter full change", "aliases": ["Litter change", "Litter refresh"],
+      "recommended": { "amount": 1, "unit": "WEEK" }, "range": { "min": 1, "max": 4, "unit": "WEEK" },
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Daily scooping lets you wait longer. Change sooner with more cats or if the litter stops clumping.",
+      "source": "Purina UK: full change weekly for clumping litter (one cat). Dr. Elsey's: totally change litter every 3-4 weeks depending on use.",
+      "sourceUrl": "https://purina.co.uk/articles/cats/kitten/behaviour/how-often-to-change-cat-litter", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_litter_box", "category": "pet", "name": "Cat litter box", "aliases": ["Litter tray", "Litter pan"],
+      "recommended": { "amount": 12, "unit": "MONTH" }, "range": { "min": 6, "max": 12, "unit": "MONTH" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Scratches in plastic hold odor and bacteria. Replace sooner if you see scratches, cracks, or stains.",
+      "source": "Petco experts: replace a typical plastic box about once a year. Dr. Elsey's: every 6 to 12 months. (Seen in search summaries only; pages not confirmed.)",
+      "sourceUrl": "https://www.petco.com/content/content-hub/home/articlePages/01/how-to-change-whole-litter-box.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "pet_litter_filter", "category": "pet", "name": "Litter box carbon filter", "aliases": ["Litter odor filter"],
+      "recommended": { "amount": 1, "unit": "MONTH" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Change more often with heavy use or scented litter. Use the filter that fits your model.",
+      "source": "Litter-Robot FAQ: change the carbon filter every month for best odor absorption; depends on use. No official interval found for other brands (e.g. Catit).",
+      "sourceUrl": "https://www.litter-robot.com/litter-robot-4-carbon-filters-2pk.html", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_aquarium_filter_media", "category": "pet", "name": "Aquarium filter cartridge", "aliases": ["Filter media", "Aquarium filter"],
+      "recommended": { "amount": 4, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 3,
+      "note": "Change sooner if water flow clearly drops. Replacing all media at once removes helpful bacteria.",
+      "source": "Tetra aquarium guide: change the filter cartridge at least every four weeks, or when water flow drops noticeably.",
+      "sourceUrl": "https://www.tetra-fish.com/learning-center/getting-started/aquarium-dos-and-donts.aspx", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_aquarium_water_change", "category": "pet", "name": "Aquarium partial water change", "aliases": ["Fish tank water change"],
+      "recommended": { "amount": 2, "unit": "WEEK" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 1,
+      "note": "Change about 25% of the water each time. Use dechlorinated water at the same temperature.",
+      "source": "Tetra: change 25% of the water every two weeks. API: partial water change (25%) every two weeks.",
+      "sourceUrl": "https://www.tetra-fish.com/learning-center/getting-started/aquarium-dos-and-donts.aspx", "checked": "2026-11-16", "verified": true
+    },
+    {
+      "id": "pet_bed", "category": "pet", "name": "Pet bed", "aliases": ["Dog bed", "Cat bed"],
+      "recommended": { "amount": 2, "unit": "YEAR" }, "range": { "min": 1, "max": 3, "unit": "YEAR" },
+      "distanceKm": null, "notifyDaysBefore": 7,
+      "note": "Replace sooner if the filling is flat, the bed is torn, or your pet stops using it. Cheap beds wear out faster.",
+      "source": "Petco and pet retailer guides: usually 1 to 3 years. No official body found; retailer articles only.",
+      "sourceUrl": "https://esg.petco.com/content/content-hub/home/articlePages/home-habitat/replacing-your-dogs-bed.html", "checked": "2026-11-16", "verified": false
+    },
+    {
+      "id": "pet_bowl_wash", "category": "pet", "name": "Pet food and water bowls (wash)", "aliases": ["Pet bowl wash"],
+      "recommended": { "amount": 1, "unit": "DAY" }, "range": null,
+      "distanceKm": null, "notifyDaysBefore": 0,
+      "note": "Wash with soap and hot water. Replace cracked or scratched bowls because bacteria stay in them.",
+      "source": "US FDA: wash pet food bowls and scooping and measuring utensils with soap and hot water after each use. Treated as at least once a day.",
+      "sourceUrl": "https://www.fda.gov/animalveterinary/resourcesforyou/animalhealthliteracy/ucm369141.htm", "checked": "2026-11-16", "verified": true
     }
   ]
 }
